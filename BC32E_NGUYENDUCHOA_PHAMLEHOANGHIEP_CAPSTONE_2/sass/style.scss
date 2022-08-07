@@ -7,7 +7,7 @@ $bg-c2-grey: #D9D9D9;
 $bg-c3-grey: #ccc;
 $bg-c1-yellow: #F8B653;
 $bg-c2-yellow: #E1B067;
-$bg-c1-violet:#AE18E2;
+$bg-c1-violet: #AE18E2;
 
 $text-s: 16px;
 $text-sl: 20px;
@@ -385,491 +385,20 @@ header {
         }
     }
 
-    .feature-content {
-        .card-item-1 {
-            position: absolute;
+    #feature-content {
+        .card-product {
+            // position: absolute;
             width: 334px;
             height: 369px;
-            left: 99px;
-            top: 153px;
-            background: $bg-c3-light;
+            // top: 153px;
+            // left: 99px;
 
-            .item {
-                .top {
-                    position: absolute;
+            .img-top {
+                img {
                     width: 220px;
                     height: 156px;
-                    left: 57px;
-                    top: 45px;
-                }
-
-                .bottom-1 {
-                    position: absolute;
-                    width: 185px;
-                    height: 29px;
-                    left: 23px;
-                    top: 231px;
-
-                    h4 {
-                        font-style: normal;
-                        @include text($text-base, $text-light , $text-c1-dark );
-                        line-height: 29px;
-                    }
-                }
-
-                .bottom-2 {
-                    position: absolute;
-                    width: 153px;
-                    height: 24px;
-                    left: 23px;
-                    top: 268px;
-
-                    p {
-                        font-style: normal;
-                        @include text($text-sl, $text-light , $text-c1-grey );
-                        line-height: 24px;
-                    }
-                }
-
-                .btn-buy-2 {
-                    position: absolute;
-                    width: 175px;
-                    height: 64px;
-                    left: 0;
-                    top: 322px;
-
-                    .btn-1 {
-
-
-                        a {
-                            text-decoration: none;
-                            @include button($text-base, $text-small , $text-c1-dark , $bg-c2-yellow , 17px 40px 18px 39px, none, none, $bg-c2-yellow, $text-c1-dark);
-                            line-height: 29px;
-                        }
-                    }
-                }
-
-                .cost {
-                    position: absolute;
-                    width: 160px;
-                    height: 64px;
-                    left: 174px;
-                    top: 322px;
-
-                    span {
-                        font-style: normal;
-                        @include button($text-base, $text-semibold , $text-c1-dark , $bg-c1-grey , 17px 47.5px 18px 66px, none, none, $bg-c1-grey, $text-c1-dark);
-                        line-height: 29px;
-                    }
-
                 }
             }
-
-        }
-
-        .card-item-2 {
-            position: absolute;
-            width: 334px;
-            height: 369px;
-            left: 500px;
-            top: 153px;
-            background: $bg-c3-light;
-
-            .item {
-                .top {
-                    position: absolute;
-                    width: 220px;
-                    height: 156px;
-                    left: 57px;
-                    top: 45px;
-                }
-
-                .bottom-1 {
-                    position: absolute;
-                    width: 185px;
-                    height: 29px;
-                    left: 23px;
-                    top: 231px;
-
-                    h4 {
-                        font-style: normal;
-                        @include text($text-base, $text-light , $text-c1-dark );
-                        line-height: 29px;
-                    }
-                }
-
-                .bottom-2 {
-                    position: absolute;
-                    width: 153px;
-                    height: 24px;
-                    left: 23px;
-                    top: 268px;
-
-                    p {
-                        font-style: normal;
-                        @include text($text-sl, $text-light , $text-c1-grey );
-                        line-height: 24px;
-                    }
-                }
-
-                .btn-buy-2 {
-                    position: absolute;
-                    width: 175px;
-                    height: 64px;
-                    left: 0;
-                    top: 322px;
-
-                    .btn-1 {
-
-
-                        a {
-                            text-decoration: none;
-                            @include button($text-base, $text-small , $text-c1-dark , $bg-c2-yellow , 17px 40px 18px 39px, none, none, $bg-c2-yellow, $text-c1-dark);
-                            line-height: 29px;
-                        }
-                    }
-                }
-
-                .cost {
-                    position: absolute;
-                    width: 160px;
-                    height: 64px;
-                    left: 174px;
-                    top: 322px;
-
-                    span {
-                        font-style: normal;
-                        @include button($text-base, $text-semibold , $text-c1-dark , $bg-c1-grey , 17px 47.5px 18px 66px, none, none, $bg-c1-grey, $text-c1-dark);
-                        line-height: 29px;
-                    }
-
-                }
-            }
-
-        }
-
-        .card-item-3 {
-            position: absolute;
-            width: 334px;
-            height: 369px;
-            left: 900px;
-            top: 153px;
-            background: $bg-c3-light;
-
-            .item {
-                .top {
-                    position: absolute;
-                    width: 220px;
-                    height: 156px;
-                    left: 57px;
-                    top: 45px;
-                }
-
-                .bottom-1 {
-                    position: absolute;
-                    width: 185px;
-                    height: 29px;
-                    left: 23px;
-                    top: 231px;
-
-                    h4 {
-                        font-style: normal;
-                        @include text($text-base, $text-light , $text-c1-dark );
-                        line-height: 29px;
-                    }
-                }
-
-                .bottom-2 {
-                    position: absolute;
-                    width: 153px;
-                    height: 24px;
-                    left: 23px;
-                    top: 268px;
-
-                    p {
-                        font-style: normal;
-                        @include text($text-sl, $text-light , $text-c1-grey );
-                        line-height: 24px;
-                    }
-                }
-
-                .btn-buy-2 {
-                    position: absolute;
-                    width: 175px;
-                    height: 64px;
-                    left: 0;
-                    top: 322px;
-
-                    .btn-1 {
-
-
-                        a {
-                            text-decoration: none;
-                            @include button($text-base, $text-small , $text-c1-dark , $bg-c2-yellow , 17px 40px 18px 39px, none, none, $bg-c2-yellow, $text-c1-dark);
-                            line-height: 29px;
-                        }
-                    }
-                }
-
-                .cost {
-                    position: absolute;
-                    width: 160px;
-                    height: 64px;
-                    left: 174px;
-                    top: 322px;
-
-                    span {
-                        font-style: normal;
-                        @include button($text-base, $text-semibold , $text-c1-dark , $bg-c1-grey , 17px 47.5px 18px 66px, none, none, $bg-c1-grey, $text-c1-dark);
-                        line-height: 29px;
-                    }
-
-                }
-            }
-
-        }
-
-        .card-item-4 {
-            position: absolute;
-            width: 334px;
-            height: 369px;
-            left: 99px;
-            top: 571px;
-            background: $bg-c3-light;
-
-            .item {
-                .top {
-                    position: absolute;
-                    width: 220px;
-                    height: 156px;
-                    left: 57px;
-                    top: 45px;
-                }
-
-                .bottom-1 {
-                    position: absolute;
-                    width: 185px;
-                    height: 29px;
-                    left: 23px;
-                    top: 231px;
-
-                    h4 {
-                        font-style: normal;
-                        @include text($text-base, $text-light , $text-c1-dark );
-                        line-height: 29px;
-                    }
-                }
-
-                .bottom-2 {
-                    position: absolute;
-                    width: 153px;
-                    height: 24px;
-                    left: 23px;
-                    top: 268px;
-
-                    p {
-                        font-style: normal;
-                        @include text($text-sl, $text-light , $text-c1-grey );
-                        line-height: 24px;
-                    }
-                }
-
-                .btn-buy-2 {
-                    position: absolute;
-                    width: 175px;
-                    height: 64px;
-                    left: 0;
-                    top: 322px;
-
-                    .btn-1 {
-
-
-                        a {
-                            text-decoration: none;
-                            @include button($text-base, $text-small , $text-c1-dark , $bg-c2-yellow , 17px 40px 18px 39px, none, none, $bg-c2-yellow, $text-c1-dark);
-                            line-height: 29px;
-                        }
-                    }
-                }
-
-                .cost {
-                    position: absolute;
-                    width: 160px;
-                    height: 64px;
-                    left: 174px;
-                    top: 322px;
-
-                    span {
-                        font-style: normal;
-                        @include button($text-base, $text-semibold , $text-c1-dark , $bg-c1-grey , 17px 47.5px 18px 66px, none, none, $bg-c1-grey, $text-c1-dark);
-                        line-height: 29px;
-                    }
-
-                }
-            }
-
-        }
-
-        .card-item-5 {
-            position: absolute;
-            width: 334px;
-            height: 369px;
-            left: 500px;
-            top: 571px;
-            background: $bg-c3-light;
-
-            .item {
-                .top {
-                    position: absolute;
-                    width: 220px;
-                    height: 156px;
-                    left: 57px;
-                    top: 45px;
-                }
-
-                .bottom-1 {
-                    position: absolute;
-                    width: 185px;
-                    height: 29px;
-                    left: 23px;
-                    top: 231px;
-
-                    h4 {
-                        font-style: normal;
-                        @include text($text-base, $text-light , $text-c1-dark );
-                        line-height: 29px;
-                    }
-                }
-
-                .bottom-2 {
-                    position: absolute;
-                    width: 153px;
-                    height: 24px;
-                    left: 23px;
-                    top: 268px;
-
-                    p {
-                        font-style: normal;
-                        @include text($text-sl, $text-light , $text-c1-grey );
-                        line-height: 24px;
-                    }
-                }
-
-                .btn-buy-2 {
-                    position: absolute;
-                    width: 175px;
-                    height: 64px;
-                    left: 0;
-                    top: 322px;
-
-                    .btn-1 {
-
-
-                        a {
-                            text-decoration: none;
-                            @include button($text-base, $text-small , $text-c1-dark , $bg-c2-yellow , 17px 40px 18px 39px, none, none, $bg-c2-yellow, $text-c1-dark);
-                            line-height: 29px;
-                        }
-                    }
-                }
-
-                .cost {
-                    position: absolute;
-                    width: 160px;
-                    height: 64px;
-                    left: 174px;
-                    top: 322px;
-
-                    span {
-                        font-style: normal;
-                        @include button($text-base, $text-semibold , $text-c1-dark , $bg-c1-grey , 17px 47.5px 18px 66px, none, none, $bg-c1-grey, $text-c1-dark);
-                        line-height: 29px;
-                    }
-
-                }
-            }
-
-        }
-
-        .card-item-6 {
-            position: absolute;
-            width: 334px;
-            height: 369px;
-            left: 900px;
-            top: 571px;
-            background: $bg-c3-light;
-
-            .item {
-                .top {
-                    position: absolute;
-                    width: 220px;
-                    height: 156px;
-                    left: 57px;
-                    top: 45px;
-                }
-
-                .bottom-1 {
-                    position: absolute;
-                    width: 185px;
-                    height: 29px;
-                    left: 23px;
-                    top: 231px;
-
-                    h4 {
-                        font-style: normal;
-                        @include text($text-base, $text-light , $text-c1-dark );
-                        line-height: 29px;
-                    }
-                }
-
-                .bottom-2 {
-                    position: absolute;
-                    width: 153px;
-                    height: 24px;
-                    left: 23px;
-                    top: 268px;
-
-                    p {
-                        font-style: normal;
-                        @include text($text-sl, $text-light , $text-c1-grey );
-                        line-height: 24px;
-                    }
-                }
-
-                .btn-buy-2 {
-                    position: absolute;
-                    width: 175px;
-                    height: 64px;
-                    left: 0;
-                    top: 322px;
-
-                    .btn-1 {
-
-
-                        a {
-                            text-decoration: none;
-                            @include button($text-base, $text-small , $text-c1-dark , $bg-c2-yellow , 17px 40px 18px 39px, none, none, $bg-c2-yellow, $text-c1-dark);
-                            line-height: 29px;
-                        }
-                    }
-                }
-
-                .cost {
-                    position: absolute;
-                    width: 160px;
-                    height: 64px;
-                    left: 174px;
-                    top: 322px;
-
-                    span {
-                        font-style: normal;
-                        @include button($text-base, $text-semibold , $text-c1-dark , $bg-c1-grey , 17px 47.5px 18px 66px, none, none, $bg-c1-grey, $text-c1-dark);
-                        line-height: 29px;
-                    }
-
-                }
-            }
-
         }
     }
 }
@@ -1079,249 +608,280 @@ header {
     }
 
     .bottom {
-            #email {
-                position: absolute;
-                top: 130px;
-                left: 120px;
-                bottom: 362px;
-                border: none;
-                @include text($text-x, $text-regular , $text-c1-dark );
-                line-height: 36px;
-                width: 35%;
+        #email {
+            position: absolute;
+            top: 130px;
+            left: 120px;
+            bottom: 362px;
+            border: none;
+            @include text($text-x, $text-regular , $text-c1-dark );
+            line-height: 36px;
+            width: 35%;
+        }
+
+        .star-1 {
+            position: absolute;
+            top: 149px;
+            bottom: 355px;
+            left: 578px;
+            right: 469px;
+            @include text($text-sl, $text-regular , $text-c1-red );
+            line-height: 24px;
+        }
+
+        .line-1 {
+            position: absolute;
+            width: 482px;
+            top: 191px;
+            bottom: 347px;
+            left: 120px;
+            border-bottom: 5px solid $text-c1-violet;
+        }
+
+        #name {
+            position: absolute;
+            top: 130px;
+            bottom: 347px;
+            left: 701px;
+            border: none;
+            @include text($text-x, $text-regular , $text-c1-dark );
+            line-height: 36px;
+            width: 35%;
+        }
+
+        .star-4 {
+            position: absolute;
+            top: 149px;
+            left: 1159px;
+            right: 112px;
+            bottom: 355px;
+            @include text($text-sl, $text-regular , $text-c1-red );
+            line-height: 24px;
+        }
+
+        .line-4 {
+            position: absolute;
+            width: 482px;
+            top: 191px;
+            bottom: 347px;
+            left: 701px;
+            border-bottom: 5px solid $text-c1-violet;
+        }
+
+        #password {
+            position: absolute;
+            left: 120px;
+            right: 814px;
+            top: 208px;
+            bottom: 284px;
+            border: none;
+            @include text($text-x, $text-regular , $text-c1-dark );
+            line-height: 36px;
+            width: 35%;
+        }
+
+        .star-2 {
+            position: absolute;
+            top: 227px;
+            left: 578px;
+            right: 469px;
+            bottom: 277px;
+            @include text($text-sl, $text-regular , $text-c1-red );
+            line-height: 24px;
+        }
+
+        .line-2 {
+            position: absolute;
+            width: 482px;
+            top: 269px;
+            bottom: 269px;
+            left: 120px;
+            border-bottom: 5px solid $text-c1-violet;
+        }
+
+        #phone {
+            position: absolute;
+            left: 696px;
+            right: 814px;
+            top: 208px;
+            bottom: 284px;
+            border: none;
+            @include text($text-x, $text-regular , $text-c1-dark );
+            line-height: 36px;
+            width: 35%;
+        }
+
+        .star-5 {
+            position: absolute;
+            top: 227px;
+            left: 1159px;
+            right: 107px;
+            bottom: 277px;
+            @include text($text-sl, $text-regular , $text-c1-red );
+            line-height: 24px;
+        }
+
+        .line-5 {
+            position: absolute;
+            width: 482px;
+            top: 269px;
+            bottom: 269px;
+            left: 696px;
+            border-bottom: 5px solid $text-c1-violet;
+        }
+
+        #password-comfirm {
+            position: absolute;
+            left: 120px;
+            right: 814px;
+            top: 292px;
+            bottom: 200px;
+            border: none;
+            @include text($text-x, $text-regular , $text-c1-dark );
+            line-height: 36px;
+            width: 35%;
+        }
+
+        .star-3 {
+            position: absolute;
+            top: 311px;
+            left: 578px;
+            right: 469px;
+            bottom: 193px;
+            @include text($text-sl, $text-regular , $text-c1-red );
+            line-height: 24px;
+        }
+
+        .line-3 {
+            position: absolute;
+            width: 482px;
+            top: 353px;
+            bottom: 185px;
+            left: 120px;
+            border-bottom: 5px solid $text-c1-violet;
+        }
+
+        .gender-1 {
+            position: absolute;
+            width: 105px;
+            height: 36px;
+            left: 696px;
+            top: 327px;
+            @include text($text-x, $text-regular , $text-c1-dark );
+            line-height: 36px;
+        }
+
+        .male {
+            position: absolute;
+            top: 323px;
+            left: 908px;
+            @include text($text-x, $text-regular , $text-c1-dark );
+
+            &:hover input~.checkmark {
+                background-color: $bg-c3-grey;
             }
 
-            .star-1 {
-                position: absolute;
-                top: 149px;
-                bottom: 355px;
-                left: 578px;
-                right: 469px;
-                @include text($text-sl, $text-regular , $text-c1-red );
-                line-height: 24px;
+            & input:checked~.checkmark {
+                background-color: $bg-c2-grey;
             }
-            .line-1{
-                position: absolute;
-                width: 482px;
-                top: 191px;
-                bottom: 347px;
-                left: 120px;
-                border-bottom: 5px solid $text-c1-violet;
+
+            & input:checked~.checkmark::after {
+                display: block;
             }
-            #name{
-                position: absolute;
-                top: 130px;
-                bottom: 347px;
-                left: 701px;
-                border: none;
-                @include text($text-x,$text-regular ,$text-c1-dark );
-                line-height: 36px;
-                width: 35%;
+
+            & .checkmark::after {
+                width: 39.25px;
+                height: 30px;
+                border-radius: 50%;
+                top: 10px;
+                left: 13px;
+                background-color: $bg-c1-violet;
             }
-            .star-4{
+
+            .checkmark {
                 position: absolute;
-                top: 149px;
-                left: 1159px;
-                right: 112px;
-                bottom: 355px;
-                @include text($text-sl, $text-regular , $text-c1-red );
-                line-height: 24px;
-            }
-            .line-4{
-                position: absolute;
-                width: 482px;
-                top: 191px;
-                bottom: 347px;
-                left: 701px;
-                border-bottom: 5px solid $text-c1-violet;
-            }
-            #password{
-                position: absolute;
-                left: 120px;
-                right: 814px;
-                top: 208px;
-                bottom: 284px;
-                border: none;
-                @include text($text-x,$text-regular ,$text-c1-dark );
-                line-height: 36px;
-                width: 35%;
-            }
-            .star-2{
-                position: absolute;
-                top: 227px;
-                left: 578px;
-                right: 469px;
-                bottom: 277px;
-                @include text($text-sl, $text-regular , $text-c1-red );
-                line-height: 24px;
-            }
-            .line-2{
-                position: absolute;
-                width: 482px;
-                top: 269px;
-                bottom: 269px;
-                left: 120px;
-                border-bottom: 5px solid $text-c1-violet;
-            }
-            #phone{
-                position: absolute;
-                left: 696px;
-                right: 814px;
-                top: 208px;
-                bottom: 284px;
-                border: none;
-                @include text($text-x,$text-regular ,$text-c1-dark );
-                line-height: 36px;
-                width: 35%;
-            }
-            .star-5{
-                position: absolute;
-                top: 227px;
-                left: 1159px;
-                right: 107px;
-                bottom: 277px;
-                @include text($text-sl, $text-regular , $text-c1-red );
-                line-height: 24px;
-            }
-            .line-5{
-                position: absolute;
-                width: 482px;
-                top: 269px;
-                bottom: 269px;
-                left: 696px;
-                border-bottom: 5px solid $text-c1-violet;
-            }
-            #password-comfirm{
-                position: absolute;
-                left: 120px;
-                right: 814px;
-                top: 292px;
-                bottom: 200px; 
-                border: none;
-                @include text($text-x,$text-regular ,$text-c1-dark );
-                line-height: 36px;
-                width: 35%;
-            }
-            .star-3{
-                position: absolute;
-                top: 311px;
-                left: 578px;
-                right: 469px;
-                bottom: 193px;
-                @include text($text-sl, $text-regular , $text-c1-red );
-                line-height: 24px;
-            }
-            .line-3{
-                position: absolute;
-                width: 482px;
-                top: 353px;
-                bottom: 185px;
-                left: 120px;
-                border-bottom: 5px solid $text-c1-violet;
-            }
-            .gender-1{
-                position: absolute;
-                width: 105px;
-                height: 36px;
-                left: 696px;
-                top: 327px;
-                @include text($text-x,$text-regular ,$text-c1-dark );
-                line-height: 36px;
-            }
-            .male{
-                position: absolute;
-                top: 323px;
-                left: 908px;
-                @include text($text-x,$text-regular ,$text-c1-dark );
-                &:hover input ~ .checkmark{
-                    background-color: $bg-c3-grey;
-                }
-                & input:checked ~ .checkmark{
-                    background-color: $bg-c2-grey;
-                }
-                & input:checked ~ .checkmark::after{
-                    display: block;
-                }
-                & .checkmark::after{
-                    width: 39.25px;
-                    height: 30px;
-                    border-radius: 50%;
-                    top:10px;
-                    left: 13px;
-                    background-color: $bg-c1-violet;
-                }
-                .checkmark{
+                border-radius: 50%;
+                background-color: $bg-c2-grey;
+                height: 50px;
+                width: 65.42px;
+                right: 100px;
+
+                &::after {
+                    content: "";
                     position: absolute;
-                    border-radius: 50%;
-                    background-color: $bg-c2-grey;
-                    height: 50px;
-                    width: 65.42px;
-                    right: 100px;
-                    &::after{
-                        content: "";
-                        position: absolute;
-                        display: none;
-                    }
-                }
-                #male{
-                    opacity: 0;
-                   
+                    display: none;
                 }
             }
-            
-            .female{
+
+            #male {
+                opacity: 0;
+
+            }
+        }
+
+        .female {
+            position: absolute;
+            top: 323px;
+            left: 1102px;
+            @include text($text-x, $text-regular , $text-c1-dark );
+
+            &:hover input~.checkmark {
+                background-color: $bg-c3-grey;
+            }
+
+            & input:checked~.checkmark {
+                background-color: $bg-c2-grey;
+            }
+
+            & input:checked~.checkmark::after {
+                display: block;
+            }
+
+            & .checkmark::after {
+                width: 39.25px;
+                height: 30px;
+                border-radius: 50%;
+                top: 10px;
+                left: 13px;
+                background-color: $bg-c1-violet;
+            }
+
+            .checkmark {
                 position: absolute;
-                top: 323px;
-                left: 1102px;
-                @include text($text-x,$text-regular ,$text-c1-dark );
-                &:hover input ~ .checkmark{
-                    background-color: $bg-c3-grey;
-                }
-                & input:checked ~ .checkmark{
-                    background-color: $bg-c2-grey;
-                }
-                & input:checked ~ .checkmark::after{
-                    display: block;
-                }
-                & .checkmark::after{
-                    width: 39.25px;
-                    height: 30px;
-                    border-radius: 50%;
-                    top:10px;
-                    left: 13px;
-                    background-color: $bg-c1-violet;
-                }
-                .checkmark{
+                border-radius: 50%;
+                background-color: $bg-c2-grey;
+                height: 50px;
+                width: 65.42px;
+                right: 140px;
+
+                &::after {
+                    content: "";
                     position: absolute;
-                    border-radius: 50%;
-                    background-color: $bg-c2-grey;
-                    height: 50px;
-                    width: 65.42px;
-                    right: 140px;
-                    &::after{
-                        content: "";
-                        position: absolute;
-                        display: none;
-                    }
-                }
-                #female{
-                    opacity: 0;
-                  
+                    display: none;
                 }
             }
+
+            #female {
+                opacity: 0;
+
+            }
+        }
     }
-    .btn-submit{
+
+    .btn-submit {
         position: absolute;
         top: 454px;
         left: 701px;
         right: 386.94px;
         bottom: 52px;
-        .btn-submit-1{
-            @include button($text-x,$text-regular ,$text-c3-light ,$bg-c1-violet ,6px 98.94px 12px 87.3px ,none ,none , $bg-c1-violet, $text-c3-light);
+
+        .btn-submit-1 {
+            @include button($text-x, $text-regular , $text-c3-light , $bg-c1-violet , 6px 98.94px 12px 87.3px, none, none, $bg-c1-violet, $text-c3-light);
         }
     }
 }
 
-footer{
+footer {
     position: absolute;
     width: 1280px;
     height: 242px;
