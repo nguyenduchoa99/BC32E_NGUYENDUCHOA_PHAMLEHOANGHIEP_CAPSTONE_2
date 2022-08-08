@@ -22,24 +22,27 @@ function renderProduct(arrProduct) {
         var shose = arrProduct[i];
         html += `
         <div class='card-product'>
+        <div class='card-body'>
         <div class='img-top'>
-        <img src="${shose.image}" alt=""/>
+            <img src="${shose.image}" alt=""/>
         </div>
         <div class='bottom-1'>
-        <h4>${shose.name}</h4>
+             <h4>${shose.name}</h4>
         </div>
         <div class='bottom-2'>
-        <span>${shose.shortDescription}</span>
+              <span>${shose.shortDescription}</span>
         </div>
+        </div>
+        
         <div class = 'btn-buy-2'>
-        <button class='btn-buy-shose'>BuyNow</button>
+              <button class='btn-buy-shose'>Buy now</button>
+              <span>$${shose.price}</span>
         </div>
-        <div class = 'cost'>
-        <p>$${shose.price}</p>
-        </div>
+        
+        
         </div>  
         `;
     };
-    document.querySelector('#feature-content').innerHTML = html;
+    document.querySelector('#tbl-content').innerHTML = html;
     return html;
 }
