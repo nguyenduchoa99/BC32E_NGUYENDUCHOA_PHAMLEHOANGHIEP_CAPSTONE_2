@@ -24,7 +24,7 @@ header .header-index .container .service {
 header .header-index .container .service .buy {
   display: flex;
   position: absolute;
-  left: 1227px;
+  left: 1027px;
   right: 53.03%;
   top: 8.33%;
   bottom: 5.56%;
@@ -36,7 +36,7 @@ header .header-index .container .service .buy .logo-buy img {
 }
 header .header-index .container .service .test {
   position: absolute;
-  left: 1258px;
+  left: 1058px;
   right: 0;
   top: 0;
   bottom: 0;
@@ -53,7 +53,7 @@ header .header-index .container .service .login {
   width: 91px;
   height: 32px;
   top: 10px;
-  left: 1303px;
+  left: 1103px;
 }
 header .header-index .container .service .login .login-user {
   font-size: 16px;
@@ -68,7 +68,7 @@ header .header-index .container .service .register {
   width: 90px;
   height: 32px;
   top: 10px;
-  left: 1370px;
+  left: 1170px;
 }
 header .header-index .container .service .register .register-user {
   font-size: 16px;
@@ -81,6 +81,7 @@ header .header-index .container .service .register .register-user {
 
 .menu {
   position: relative;
+  width: 1280px;
   height: 50px;
   list-style: none;
 }
@@ -160,92 +161,123 @@ header .header-index .container .service .register .register-user {
   line-height: 24px;
 }
 
-.carousel-1 .carousel {
-  background: #FFFFFF;
+.carousel {
   position: relative;
-}
-.carousel-1 .carousel .carousel-indicators {
-  position: absolute;
-  top: 397px;
-}
-.carousel-1 .carousel .carousel-indicators li {
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, 0.13);
-  margin-left: 30px;
-}
-.carousel-1 .carousel .carousel-indicators li.active {
-  background-color: #f93737;
-}
-.carousel-1 .carousel .carousel-inner .carousel-item {
-  background-image: url(../assets/img/image\ 6.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  width: 1280px;
   height: 530px;
+  background: #FFFFFF;
 }
-.carousel-1 .carousel .carousel-inner .carousel-item .carousel-thumb img {
-  margin-left: 122px;
-  width: 821px;
-  height: 392px;
-}
-.carousel-1 .carousel .carousel-inner .carousel-item .text-carousel {
+.carousel .img-shose img {
   position: absolute;
+  height: 392px;
+  left: 86px;
+  top: 5px;
+}
+.carousel .product {
+  position: absolute;
+  width: 291px;
+  height: 51px;
+  left: 930px;
   top: 124px;
-  left: 1130px;
-  right: 59px;
-  bottom: 355px;
+}
+.carousel .product h3 {
+  font-style: normal;
   font-size: 40px;
   font-weight: 300;
   color: #000000;
+  line-height: 48px;
 }
-.carousel-1 .carousel .carousel-inner .carousel-item .text-carousel-2 {
+.carousel .pdt-1 {
   position: absolute;
+  width: 291px;
+  height: 51px;
+  left: 930px;
   top: 175px;
-  left: 1130px;
-  right: 59px;
-  bottom: 304px;
+}
+.carousel .pdt-1 p {
+  font-style: normal;
   font-size: 20px;
   font-weight: 300;
   color: #000000;
+  line-height: 24px;
 }
-.carousel-1 .carousel .carousel-inner .carousel-item .btn-buy {
+.carousel .btn-buy {
   position: absolute;
+  width: 150px;
+  height: 50px;
+  left: 930px;
   top: 225px;
-  left: 1130px;
+}
+.carousel .btn-buy a {
   font-size: 20px;
   font-weight: 300;
   color: #FFFFFF;
   background: #F8B653;
   padding: 13px 35px 13px 34px;
-  border: 1px solid #F8B653;
+  border: none;
   border-radius: none;
   cursor: pointer;
+  text-decoration: none;
 }
-.carousel-1 .carousel .carousel-inner .carousel-item .btn-buy:hover {
-  background-color: #FFFFFF;
-  color: #F8B653;
+.carousel .btn-buy a:hover {
+  background-color: #F8B653;
+  color: #FFFFFF;
 }
-.carousel-1 .carousel .carousel-control-prev {
+.carousel .img-left {
   position: absolute;
-  top: -100px;
-  left: -70px;
+  width: 66.13px;
+  height: 45.71px;
+  left: 18px;
+  top: 175px;
 }
-.carousel-1 .carousel .carousel-control-next {
+.carousel .img-right {
   position: absolute;
-  top: -100px;
+  width: 66.13px;
+  height: 45.71px;
+  left: 1221.44px;
+  top: 175px;
+  z-index: 1;
 }
-.carousel-1 .carousel .carousel-control-next img {
+.carousel .dots-1 {
   position: absolute;
-  right: 25px;
+  width: 15px;
+  height: 15px;
+  left: 597px;
+  top: 390px;
+}
+.carousel .dots-2 {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  left: 635px;
+  top: 390px;
+}
+.carousel .dots-3 {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  left: 667px;
+  top: 390px;
+}
+.carousel .img-bottom {
+  position: absolute;
+  width: 1334px;
+  height: 393px;
+  top: 100px;
 }
 
 .feature {
   position: relative;
-  padding-top: 50px;
+  width: 1280px;
+  height: 1044px;
   background: #FFFCFC;
-  padding-bottom: 80px;
+}
+.feature .pdt-2 {
+  position: absolute;
+  width: 351px;
+  height: 48px;
+  left: 476px;
+  top: 16px;
 }
 .feature .pdt-2 h3 {
   font-style: normal;
@@ -253,250 +285,20 @@ header .header-index .container .service .register .register-user {
   font-weight: 400;
   color: #000000;
   line-height: 48px;
-  text-align: center;
 }
-.feature #feature-content {
-  padding-top: 89px;
-}
-.feature #feature-content .feature-row {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: 100px;
-  padding-right: 30px;
-}
-.feature #feature-content .feature-row .card-product {
-  max-width: 30%;
-  flex: 0 0 30%;
+.feature #feature-content .card-product {
   width: 334px;
-  height: 460px;
-  background-color: #F8F8F8;
-  margin-right: 40px;
-  margin-bottom: 50px;
-  position: relative;
+  height: 369px;
 }
-.feature #feature-content .feature-row .card-product .img-top {
-  text-align: center;
-}
-.feature #feature-content .feature-row .card-product .img-top img {
+.feature #feature-content .card-product .img-top img {
   width: 220px;
-  height: 220px;
+  height: 156px;
 }
-.feature #feature-content .feature-row .card-product .bottom-1 {
-  margin-left: 10px;
-  margin-top: 30px;
-  font-size: 24px;
-  font-weight: 300;
-  color: #000000;
-  line-height: 29px;
-}
-.feature #feature-content .feature-row .card-product .bottom-2 {
-  margin-left: 10px;
-  font-size: 20px;
-  font-weight: 300;
-  color: #CBC9C9;
-  line-height: 24px;
-}
-.feature #feature-content .feature-row .card-product .btn-buy-2 {
-  display: flex;
-  flex-wrap: wrap;
+
+footer img {
   position: absolute;
-  bottom: 0;
-  width: 100%;
-}
-.feature #feature-content .feature-row .card-product .btn-buy-2 .btn-buy-shose {
-  width: 50%;
-  flex: 0 0 50%;
-  font-size: 24px;
-  font-weight: 200;
-  color: #000000;
-  background: #E1B067;
-  padding: 17px 27px 18px 39px;
-  border: 1px solid #E1B067;
-  border-radius: none;
-  cursor: pointer;
-}
-.feature #feature-content .feature-row .card-product .btn-buy-2 .btn-buy-shose:hover {
-  background-color: #FFFFFF;
-  color: #E1B067;
-}
-.feature #feature-content .feature-row .card-product .btn-buy-2 span {
-  text-align: center;
-  width: 50%;
-  flex: 0 0 50%;
-  font-size: 24px;
-  font-weight: 600;
-  color: #000000;
-  line-height: 35px;
-  background-color: #DEDDDC;
-  padding: 17px 40px 18px 66px;
-}
-
-footer .footer-top {
-  background: #F8F8F8;
-  padding: 30px 0;
-}
-footer .footer-top .container .row .get-footer {
-  border-right: 2px solid rgba(222, 221, 220, 0.5);
-}
-footer .footer-top .container .row .get-footer h4 {
-  font-size: 24px;
-  font-weight: 600;
-  color: #000000;
-  padding-bottom: 5px;
-}
-footer .footer-top .container .row .get-footer ul {
-  list-style: none;
-}
-footer .footer-top .container .row .get-footer ul li a {
-  font-size: 16px;
-  font-weight: 300;
-  color: #000000;
-  cursor: pointer;
-  text-decoration: none;
-}
-footer .footer-top .container .row .get-footer ul li a:hover {
-  color: #F50E0E;
-}
-footer .footer-top .container .row .order-footer {
-  border-right: 2px solid rgba(222, 221, 220, 0.5);
-}
-footer .footer-top .container .row .order-footer h4 {
-  font-size: 24px;
-  font-weight: 600;
-  color: #000000;
-  padding-bottom: 5px;
-}
-footer .footer-top .container .row .order-footer ul {
-  list-style: none;
-}
-footer .footer-top .container .row .order-footer ul li a {
-  font-size: 16px;
-  font-weight: 300;
-  color: #000000;
-  cursor: pointer;
-  text-decoration: none;
-}
-footer .footer-top .container .row .order-footer ul li a:hover {
-  color: #F50E0E;
-}
-footer .footer-top .container .row .register-footer h4 {
-  font-size: 24px;
-  font-weight: 600;
-  color: #000000;
-  padding-bottom: 5px;
-}
-footer .footer-top .container .row .register-footer p {
-  font-size: 16px;
-  font-weight: 300;
-  color: #000000;
-}
-footer .footer-top .container .row .register-footer a {
-  font-size: 16px;
-  font-weight: 300;
-  color: #F50E0E;
-  cursor: pointer;
-  text-decoration: none;
-}
-footer .footer-top .container .row .register-footer a:hover {
-  color: #0000FF;
-}
-footer .footer-bottom {
-  background: #DEDDDC;
-  padding: 30px 0;
-}
-footer .footer-bottom .container .row .sign-footer {
-  border-right: 2px solid #bbc4cc;
-}
-footer .footer-bottom .container .row .sign-footer h4 {
-  font-size: 24px;
-  font-weight: 600;
-  color: #000000;
-  padding-bottom: 5px;
-}
-footer .footer-bottom .container .row .sign-footer p {
-  font-size: 16px;
-  font-weight: 300;
-  color: #000000;
-}
-footer .footer-bottom .container .row .sign-footer a {
-  font-size: 16px;
-  font-weight: 300;
-  color: #F50E0E;
-  cursor: pointer;
-  text-decoration: none;
-}
-footer .footer-bottom .container .row .sign-footer a:hover {
-  color: #0000FF;
-}
-footer .footer-bottom .container .row .gift-footer {
-  border-right: 2px solid #bbc4cc;
-}
-footer .footer-bottom .container .row .gift-footer h4 {
-  font-size: 24px;
-  font-weight: 600;
-  color: #000000;
-  padding-bottom: 5px;
-}
-footer .footer-bottom .container .row .gift-footer p {
-  font-size: 16px;
-  font-weight: 300;
-  color: #000000;
-}
-footer .footer-bottom .container .row .gift-footer a {
-  font-size: 16px;
-  font-weight: 300;
-  color: #F50E0E;
-  cursor: pointer;
-  text-decoration: none;
-}
-footer .footer-bottom .container .row .gift-footer a:hover {
-  color: #0000FF;
-}
-footer .footer-bottom .container .row .store-footer h4 {
-  font-size: 24px;
-  font-weight: 600;
-  color: #000000;
-  padding-bottom: 5px;
-}
-footer .footer-bottom .container .row .store-footer p {
-  font-size: 16px;
-  font-weight: 300;
-  color: #000000;
-}
-footer .footer-bottom .container .row .store-footer a {
-  font-size: 16px;
-  font-weight: 300;
-  color: #F50E0E;
-  cursor: pointer;
-  text-decoration: none;
-}
-footer .footer-bottom .container .row .store-footer a:hover {
-  color: #0000FF;
-}
-
-.backToTop {
-  width: 50px;
-  height: 50px;
-  text-align: center;
-  display: block;
-  position: fixed;
-  right: 15px;
-  bottom: 15px;
-  transition: all 0.2s;
-  color: #000000;
-  visibility: hidden;
-  opacity: 0;
-}
-.backToTop:hover {
-  color: #F50E0E;
-}
-.backToTop i {
-  font-size: 40px;
-}
-
-.cd-top--is-visible {
-  visibility: visible;
-  opacity: 1;
+  width: 1280px;
+  height: 242px;
 }
 
 header .header-register {
@@ -504,6 +306,7 @@ header .header-register {
   height: 50px;
   position: relative;
   border: 1px solid #000000;
+  width: 1280px;
 }
 header .header-register .container .logo .logo-cyber img {
   position: absolute;
@@ -518,7 +321,7 @@ header .header-register .container .service {
 header .header-register .container .service .buy {
   display: flex;
   position: absolute;
-  left: 1227px;
+  left: 1027px;
   right: 53.03%;
   top: 8.33%;
   bottom: 5.56%;
@@ -530,7 +333,7 @@ header .header-register .container .service .buy .logo-buy img {
 }
 header .header-register .container .service .test {
   position: absolute;
-  left: 1258px;
+  left: 1058px;
   right: 0;
   top: 0;
   bottom: 0;
@@ -547,7 +350,7 @@ header .header-register .container .service .login {
   width: 91px;
   height: 32px;
   top: 10px;
-  left: 1303px;
+  left: 1103px;
 }
 header .header-register .container .service .login .login-user {
   font-size: 16px;
@@ -562,7 +365,7 @@ header .header-register .container .service .register {
   width: 90px;
   height: 32px;
   top: 10px;
-  left: 1370px;
+  left: 1170px;
 }
 header .header-register .container .service .register .register-user {
   font-size: 16px;
@@ -575,6 +378,7 @@ header .header-register .container .service .register .register-user {
 
 .menu-register {
   position: relative;
+  width: 1280px;
   height: 50px;
   list-style: none;
 }
@@ -656,12 +460,16 @@ header .header-register .container .service .register .register-user {
 
 .register-content {
   position: relative;
+  width: 1280px;
   height: 538px;
   background: #FFFCFC;
 }
 .register-content .top {
-  text-align: center;
-  padding-top: 30px;
+  position: absolute;
+  width: 156px;
+  height: 48px;
+  left: 524px;
+  top: 30px;
 }
 .register-content .top h3 {
   font-size: 40px;
@@ -673,20 +481,20 @@ header .header-register .container .service .register .register-user {
 .register-content .bottom #email {
   position: absolute;
   top: 130px;
-  left: 270px;
+  left: 120px;
   bottom: 362px;
   border: none;
   font-size: 30px;
   font-weight: 400;
   color: #000000;
   line-height: 36px;
-  width: 30%;
+  width: 35%;
 }
 .register-content .bottom .star-1 {
   position: absolute;
   top: 149px;
   bottom: 355px;
-  left: 738px;
+  left: 578px;
   right: 469px;
   font-size: 20px;
   font-weight: 400;
@@ -698,25 +506,25 @@ header .header-register .container .service .register .register-user {
   width: 482px;
   top: 191px;
   bottom: 347px;
-  left: 270px;
+  left: 120px;
   border-bottom: 5px solid #AE18E2;
 }
 .register-content .bottom #name {
   position: absolute;
   top: 130px;
   bottom: 347px;
-  left: 851px;
+  left: 701px;
   border: none;
   font-size: 30px;
   font-weight: 400;
   color: #000000;
   line-height: 36px;
-  width: 30%;
+  width: 35%;
 }
 .register-content .bottom .star-4 {
   position: absolute;
   top: 149px;
-  left: 1309px;
+  left: 1159px;
   right: 112px;
   bottom: 355px;
   font-size: 20px;
@@ -729,12 +537,12 @@ header .header-register .container .service .register .register-user {
   width: 482px;
   top: 191px;
   bottom: 347px;
-  left: 851px;
+  left: 701px;
   border-bottom: 5px solid #AE18E2;
 }
 .register-content .bottom #password {
   position: absolute;
-  left: 270px;
+  left: 120px;
   right: 814px;
   top: 208px;
   bottom: 284px;
@@ -743,12 +551,12 @@ header .header-register .container .service .register .register-user {
   font-weight: 400;
   color: #000000;
   line-height: 36px;
-  width: 30%;
+  width: 35%;
 }
 .register-content .bottom .star-2 {
   position: absolute;
   top: 227px;
-  left: 738px;
+  left: 578px;
   right: 469px;
   bottom: 277px;
   font-size: 20px;
@@ -761,12 +569,12 @@ header .header-register .container .service .register .register-user {
   width: 482px;
   top: 269px;
   bottom: 269px;
-  left: 270px;
+  left: 120px;
   border-bottom: 5px solid #AE18E2;
 }
 .register-content .bottom #phone {
   position: absolute;
-  left: 846px;
+  left: 696px;
   right: 814px;
   top: 208px;
   bottom: 284px;
@@ -775,12 +583,12 @@ header .header-register .container .service .register .register-user {
   font-weight: 400;
   color: #000000;
   line-height: 36px;
-  width: 30%;
+  width: 35%;
 }
 .register-content .bottom .star-5 {
   position: absolute;
   top: 227px;
-  left: 1309px;
+  left: 1159px;
   right: 107px;
   bottom: 277px;
   font-size: 20px;
@@ -793,12 +601,12 @@ header .header-register .container .service .register .register-user {
   width: 482px;
   top: 269px;
   bottom: 269px;
-  left: 846px;
+  left: 696px;
   border-bottom: 5px solid #AE18E2;
 }
 .register-content .bottom #password-comfirm {
   position: absolute;
-  left: 270px;
+  left: 120px;
   right: 814px;
   top: 292px;
   bottom: 200px;
@@ -807,12 +615,12 @@ header .header-register .container .service .register .register-user {
   font-weight: 400;
   color: #000000;
   line-height: 36px;
-  width: 30%;
+  width: 35%;
 }
 .register-content .bottom .star-3 {
   position: absolute;
   top: 311px;
-  left: 728px;
+  left: 578px;
   right: 469px;
   bottom: 193px;
   font-size: 20px;
@@ -825,14 +633,14 @@ header .header-register .container .service .register .register-user {
   width: 482px;
   top: 353px;
   bottom: 185px;
-  left: 270px;
+  left: 120px;
   border-bottom: 5px solid #AE18E2;
 }
 .register-content .bottom .gender-1 {
   position: absolute;
   width: 105px;
   height: 36px;
-  left: 846px;
+  left: 696px;
   top: 327px;
   font-size: 30px;
   font-weight: 400;
@@ -842,7 +650,7 @@ header .header-register .container .service .register .register-user {
 .register-content .bottom .male {
   position: absolute;
   top: 323px;
-  left: 1058px;
+  left: 908px;
   font-size: 30px;
   font-weight: 400;
   color: #000000;
@@ -883,7 +691,7 @@ header .header-register .container .service .register .register-user {
 .register-content .bottom .female {
   position: absolute;
   top: 323px;
-  left: 1252px;
+  left: 1102px;
   font-size: 30px;
   font-weight: 400;
   color: #000000;
@@ -924,7 +732,7 @@ header .header-register .container .service .register .register-user {
 .register-content .btn-submit {
   position: absolute;
   top: 454px;
-  left: 851px;
+  left: 701px;
   right: 386.94px;
   bottom: 52px;
 }
@@ -944,147 +752,7 @@ header .header-register .container .service .register .register-user {
 }
 
 footer {
-  padding-top: 30px;
-}
-footer .footer-top-1 {
-  background: #F8F8F8;
-  padding: 30px 0;
-}
-footer .footer-top-1 .container .row .get-footer {
-  border-right: 2px solid rgba(222, 221, 220, 0.5);
-}
-footer .footer-top-1 .container .row .get-footer h4 {
-  font-size: 24px;
-  font-weight: 600;
-  color: #000000;
-  padding-bottom: 5px;
-}
-footer .footer-top-1 .container .row .get-footer ul {
-  list-style: none;
-}
-footer .footer-top-1 .container .row .get-footer ul li a {
-  font-size: 16px;
-  font-weight: 300;
-  color: #000000;
-  cursor: pointer;
-  text-decoration: none;
-}
-footer .footer-top-1 .container .row .get-footer ul li a:hover {
-  color: #F50E0E;
-}
-footer .footer-top-1 .container .row .order-footer {
-  border-right: 2px solid rgba(222, 221, 220, 0.5);
-}
-footer .footer-top-1 .container .row .order-footer h4 {
-  font-size: 24px;
-  font-weight: 600;
-  color: #000000;
-  padding-bottom: 5px;
-}
-footer .footer-top-1 .container .row .order-footer ul {
-  list-style: none;
-}
-footer .footer-top-1 .container .row .order-footer ul li a {
-  font-size: 16px;
-  font-weight: 300;
-  color: #000000;
-  cursor: pointer;
-  text-decoration: none;
-}
-footer .footer-top-1 .container .row .order-footer ul li a:hover {
-  color: #F50E0E;
-}
-footer .footer-top-1 .container .row .register-footer h4 {
-  font-size: 24px;
-  font-weight: 600;
-  color: #000000;
-  padding-bottom: 5px;
-}
-footer .footer-top-1 .container .row .register-footer p {
-  font-size: 16px;
-  font-weight: 300;
-  color: #000000;
-}
-footer .footer-top-1 .container .row .register-footer a {
-  font-size: 16px;
-  font-weight: 300;
-  color: #F50E0E;
-  cursor: pointer;
-  text-decoration: none;
-}
-footer .footer-top-1 .container .row .register-footer a:hover {
-  color: #0000FF;
-}
-footer .footer-bottom-1 {
-  background: #DEDDDC;
-  padding: 30px 0;
-}
-footer .footer-bottom-1 .container .row .sign-footer {
-  border-right: 2px solid #bbc4cc;
-}
-footer .footer-bottom-1 .container .row .sign-footer h4 {
-  font-size: 24px;
-  font-weight: 600;
-  color: #000000;
-  padding-bottom: 5px;
-}
-footer .footer-bottom-1 .container .row .sign-footer p {
-  font-size: 16px;
-  font-weight: 300;
-  color: #000000;
-}
-footer .footer-bottom-1 .container .row .sign-footer a {
-  font-size: 16px;
-  font-weight: 300;
-  color: #F50E0E;
-  cursor: pointer;
-  text-decoration: none;
-}
-footer .footer-bottom-1 .container .row .sign-footer a:hover {
-  color: #0000FF;
-}
-footer .footer-bottom-1 .container .row .gift-footer {
-  border-right: 2px solid #bbc4cc;
-}
-footer .footer-bottom-1 .container .row .gift-footer h4 {
-  font-size: 24px;
-  font-weight: 600;
-  color: #000000;
-  padding-bottom: 5px;
-}
-footer .footer-bottom-1 .container .row .gift-footer p {
-  font-size: 16px;
-  font-weight: 300;
-  color: #000000;
-}
-footer .footer-bottom-1 .container .row .gift-footer a {
-  font-size: 16px;
-  font-weight: 300;
-  color: #F50E0E;
-  cursor: pointer;
-  text-decoration: none;
-}
-footer .footer-bottom-1 .container .row .gift-footer a:hover {
-  color: #0000FF;
-}
-footer .footer-bottom-1 .container .row .store-footer h4 {
-  font-size: 24px;
-  font-weight: 600;
-  color: #000000;
-  padding-bottom: 5px;
-}
-footer .footer-bottom-1 .container .row .store-footer p {
-  font-size: 16px;
-  font-weight: 300;
-  color: #000000;
-}
-footer .footer-bottom-1 .container .row .store-footer a {
-  font-size: 16px;
-  font-weight: 300;
-  color: #F50E0E;
-  cursor: pointer;
-  text-decoration: none;
-}
-footer .footer-bottom-1 .container .row .store-footer a:hover {
-  color: #0000FF;
+  position: absolute;
+  width: 1280px;
+  height: 242px;
 }

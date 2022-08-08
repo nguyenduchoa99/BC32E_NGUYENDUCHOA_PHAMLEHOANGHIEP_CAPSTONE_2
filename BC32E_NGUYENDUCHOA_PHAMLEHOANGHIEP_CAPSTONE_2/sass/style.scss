@@ -5,9 +5,11 @@ $bg-c3-light: #F8F8F8;
 $bg-c1-grey: #DEDDDC;
 $bg-c2-grey: #D9D9D9;
 $bg-c3-grey: #ccc;
+$bg-c4-grey: #bbc4cc;
 $bg-c1-yellow: #F8B653;
 $bg-c2-yellow: #E1B067;
 $bg-c1-violet: #AE18E2;
+$bg-c1-red: #f93737;
 
 $text-s: 16px;
 $text-sl: 20px;
@@ -28,9 +30,11 @@ $text-c2-light: #F7F7F7;
 $text-c3-light: #FFFCFC;
 $text-c1-dark: #000000;
 $text-c1-yellow: #F8B653;
+$text-c2-yellow:#E1B067;
 $text-c1-grey: #CBC9C9;
 $text-c1-red: #F50E0E;
 $text-c1-violet: #AE18E2;
+$text-c1-blue: #0000FF;
 
 
 
@@ -39,6 +43,15 @@ $text-c1-violet: #AE18E2;
     font-size: $fs;
     font-weight: $fw;
     color: $c;
+}
+@mixin text-a($fs: $text-x, $fw:$text-regular,$c:$text-c1-dark,$c-hover){
+    font-size: $fs;
+    font-weight: $fw;
+    color: $c;
+    cursor: pointer;
+    &:hover{
+        color: $c-hover;
+    }
 }
 
 @mixin button($fs, $fw, $fc, $bg, $pd, $bd, $br, $bg-hover, $c-hover) {
@@ -72,7 +85,7 @@ header {
         height: 50px;
         position: relative;
         border: 1px solid $text-c1-dark;
-        width: 1280px;
+        // width: 1280px;   
 
         .container {
             .logo {
@@ -93,7 +106,7 @@ header {
                 .buy {
                     display: flex;
                     position: absolute;
-                    left: 1027px;
+                    left: 1227px;
                     right: 53.03%;
                     top: 8.33%;
                     bottom: 5.56%;
@@ -111,7 +124,7 @@ header {
 
                 .test {
                     position: absolute;
-                    left: 1058px;
+                    left: 1258px;
                     right: 0;
                     top: 0;
                     bottom: 0;
@@ -128,7 +141,7 @@ header {
                     width: 91px;
                     height: 32px;
                     top: 10px;
-                    left: 1103px;
+                    left: 1303px;
 
                     .login-user {
                         @include text($text-s, $text-light, $text-c2-light);
@@ -143,7 +156,7 @@ header {
                     width: 90px;
                     height: 32px;
                     top: 10px;
-                    left: 1170px;
+                    left: 1370px;
 
                     .register-user {
                         @include text($text-s, $text-light , $text-c2-light );
@@ -159,7 +172,6 @@ header {
 
 .menu {
     position: relative;
-    width: 1280px;
     height: 50px;
     list-style: none;
 
@@ -239,178 +251,303 @@ header {
     }
 }
 
-.carousel {
-    position: relative;
-    width: 1280px;
-    height: 530px;
-    // top: 100px;
-    background: $bg-c1-light;
+.carousel-1 {
+    .carousel {
+        background: $bg-c1-light;
+        position: relative;
 
-
-    .img-shose {
-        img {
+        .carousel-indicators {
             position: absolute;
-            height: 392px;
-            left: 86px;
-            top: 5px;
+            top: 397px;
+
+            li {
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                border: 1px solid rgba(0, 0, 0, 0.13);
+                margin-left: 30px;
+
+                &.active {
+                    background-color: $bg-c1-red;
+                }
+            }
         }
-    }
 
-    .product {
-        position: absolute;
-        width: 291px;
-        height: 51px;
-        left: 930px;
-        top: 124px;
+        .carousel-inner {
 
-        h3 {
-            font-style: normal;
-            @include text($text-xl, $text-light, $text-c1-dark);
-            line-height: 48px;
+            .carousel-item {
+                background-image: url(../assets/img/image\ 6.png);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 530px;
+
+                .carousel-thumb {
+                    img {
+                        margin-left: 122px;
+                        width: 821px;
+                        height: 392px;
+                    }
+                }
+
+                .text-carousel {
+                    position: absolute;
+                    top: 124px;
+                    left: 1130px;
+                    right: 59px;
+                    bottom: 355px;
+                    @include text($text-xl, $text-light , $text-c1-dark );
+                }
+
+                .text-carousel-2 {
+                    position: absolute;
+                    top: 175px;
+                    left: 1130px;
+                    right: 59px;
+                    bottom: 304px;
+                    @include text($text-sl, $text-light , $text-c1-dark );
+                }
+
+                .btn-buy {
+                    position: absolute;
+                    top: 225px;
+                    left: 1130px;
+                    @include button($text-sl, $text-light , $text-c1-light , $bg-c1-yellow , 13px 35px 13px 34px, 1px solid $bg-c1-yellow , none, $bg-c1-light, $text-c1-yellow);
+                }
+            }
         }
-    }
 
-    .pdt-1 {
-        position: absolute;
-        width: 291px;
-        height: 51px;
-        left: 930px;
-        top: 175px;
-
-        p {
-            font-style: normal;
-            @include text($text-sl, $text-light , $text-c1-dark );
-            line-height: 24px;
+        .carousel-control-prev {
+            position: absolute;
+            top: -100px;
+            left: -70px;
         }
-    }
 
-    .btn-buy {
-        position: absolute;
-        width: 150px;
-        height: 50px;
-        left: 930px;
-        top: 225px;
+        .carousel-control-next {
+            position: absolute;
+            top: -100px;
 
-        a {
-            @include button($text-sl, $text-light , $text-c1-light , $bg-c1-yellow , 13px 35px 13px 34px, none, none, $bg-c1-yellow, $text-c1-light);
-            text-decoration: none;
+            // right: -70px;
+            img {
+                position: absolute;
+                right: 25px;
+            }
         }
-    }
 
-    .img-left {
-        position: absolute;
-        width: 66.13px;
-        height: 45.71px;
-        left: 18px;
-        top: 175px;
 
-        // a {
-        //     .img{
-        //         border: 1px solid rgba(0, 0, 0, 0.24);
-        //         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        //         transform: rotate(-90deg);
-        //     }
-
-        // } 
-
-    }
-
-    .img-right {
-        position: absolute;
-        width: 66.13px;
-        height: 45.71px;
-        left: 1221.44px;
-        top: 175px;
-        z-index: 1;
-        // a{
-        //     .img{
-        //         border: 1px solid rgba(0, 0, 0, 0.24);
-        //         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        //         transform: rotate(90deg);
-        //     }
-        // }
-    }
-
-    .dots-1 {
-        position: absolute;
-        width: 15px;
-        height: 15px;
-        left: 597px;
-        top: 390px;
-    }
-
-    .dots-2 {
-        position: absolute;
-        width: 15px;
-        height: 15px;
-        left: 635px;
-        top: 390px;
-    }
-
-    .dots-3 {
-        position: absolute;
-        width: 15px;
-        height: 15px;
-        left: 667px;
-        top: 390px;
-    }
-
-    .img-bottom {
-        position: absolute;
-        width: 1334px;
-        height: 393px;
-        top: 100px;
-        // left: -36px;
     }
 }
 
 .feature {
     position: relative;
-    width: 1280px;
-    height: 1044px;
-    // top: 630px;
+    padding-top: 50px;
     background: $bg-c2-light;
+    padding-bottom: 80px;
 
-    .pdt-2 {
-        position: absolute;
-        width: 351px;
-        height: 48px;
-        left: 476px;
-        top: 16px;
+    .pdt-2 { 
 
         h3 {
             font-style: normal;
             @include text($text-xl, $text-regular , $text-c1-dark );
             line-height: 48px;
+            text-align: center;
         }
     }
 
     #feature-content {
-        .card-product {
-            // position: absolute;
-            width: 334px;
-            height: 369px;
-            // top: 153px;
-            // left: 99px;
+        padding-top: 89px;
+            .feature-row{
+                display: flex;
+                flex-wrap: wrap;
+                margin-left: 100px;
+                padding-right: 30px;
+                .card-product {
+                    max-width:  30%;
+                    flex: 0 0 30%;
+                    width: 334px;
+                    height: 460px;
+                    background-color: $bg-c3-light;
+                    margin-right: 40px;
+                    margin-bottom: 50px;
+                    position: relative;
+        
+                    .img-top {
+                        text-align: center;
+                        img {
+                            width: 220px;
+                            height: 220px;
+                        }
+                    }
+                    .bottom-1{
+                        margin-left: 10px;
+                        margin-top: 30px;
+                        @include text($text-base,$text-light ,$text-c1-dark );
+                        line-height: 29px;
+                    }
+                    .bottom-2{
+                        margin-left: 10px;
+                        @include text($text-sl,$text-light ,$text-c1-grey );
+                        line-height: 24px;
+                    }
+                    .btn-buy-2{
+                        display: flex;
+                        flex-wrap: wrap;
+                        position: absolute;
+                        bottom: 0;
+                        width: 100%;
+                        .btn-buy-shose{
+                            width: 50%;
+                            flex: 0 0 50%;
+                            @include button($text-base,$text-small ,$text-c1-dark ,$bg-c2-yellow ,17px 27px 18px 39px ,1px solid $bg-c2-yellow ,none , $bg-c1-light, $text-c2-yellow);
+                        }
+                        span{
+                            text-align: center;
+                            width: 50%;
+                            flex: 0 0 50%;
+                            @include text($text-base,$text-semibold ,$text-c1-dark );
+                            line-height: 35px;
+                            background-color: $bg-c1-grey;
+                            padding: 17px 40px 18px 66px;
+                        }
+                    }
+                    
 
-            .img-top {
-                img {
-                    width: 220px;
-                    height: 156px;
+                }
+            }
+        } 
+        
+    
+}
+
+footer {
+    .footer-top{
+        background: $bg-c3-light;
+        padding: 30px 0;
+        .container{
+            .row{
+                .get-footer{
+                    border-right: 2px solid rgba(222,221,220,0.5);
+                    h4{
+                        @include text($text-base,$text-semibold ,$text-c1-dark );
+                        padding-bottom: 5px;
+                    }
+                    ul{
+                        list-style: none;
+                        li{
+                            a{
+                                @include text-a($text-s,$text-light ,$text-c1-dark , $text-c1-red);
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+                .order-footer{
+                    border-right: 2px solid rgba(222,221,220,0.5);
+                    h4{
+                        @include text($text-base,$text-semibold ,$text-c1-dark );
+                        padding-bottom: 5px;
+                    }
+                    ul{
+                        list-style: none;
+                        li{
+                            a{
+                                @include text-a($text-s,$text-light ,$text-c1-dark , $text-c1-red);
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+                .register-footer{
+                    h4{
+                        @include text($text-base,$text-semibold ,$text-c1-dark );
+                        padding-bottom: 5px;
+                    }
+                    p{
+                        @include text($text-s,$text-light ,$text-c1-dark );
+                    }
+                    a{
+                        @include text-a($text-s,$text-light ,$text-c1-red , $text-c1-blue);
+                        text-decoration: none;
+                    }
+                }
+
+            }
+        }
+    }
+    .footer-bottom{
+        background: $bg-c1-grey;
+        padding: 30px 0;
+        .container{
+            .row{
+                .sign-footer{
+                    border-right: 2px solid $bg-c4-grey;
+                    h4{
+                        @include text($text-base,$text-semibold ,$text-c1-dark );
+                        padding-bottom: 5px;
+                    }
+                    p{
+                        @include text($text-s,$text-light ,$text-c1-dark );
+                    }
+                    a{
+                        @include text-a($text-s,$text-light ,$text-c1-red , $text-c1-blue);
+                        text-decoration: none;
+                    }
+                }
+                .gift-footer{
+                    border-right: 2px solid $bg-c4-grey;
+                    h4{ 
+                        @include text($text-base,$text-semibold ,$text-c1-dark );
+                        padding-bottom: 5px;
+                    }
+                    p{
+                        @include text($text-s,$text-light ,$text-c1-dark );
+                    }
+                    a{
+                        @include text-a($text-s,$text-light ,$text-c1-red , $text-c1-blue);
+                        text-decoration: none;
+                    }
+                }
+                .store-footer{
+                    h4{
+                        @include text($text-base,$text-semibold ,$text-c1-dark );
+                        padding-bottom: 5px;
+                    }
+                    p{
+                        @include text($text-s,$text-light ,$text-c1-dark );
+                    }
+                    a{
+                        @include text-a($text-s,$text-light ,$text-c1-red , $text-c1-blue);
+                        text-decoration: none;
+                    }
                 }
             }
         }
     }
 }
 
-footer {
-    img {
-        position: absolute;
-        width: 1280px;
-        height: 242px;
+.backToTop{
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    display: block;
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    transition: all 0.2s;
+    color: $text-c1-dark;
+    visibility: hidden;
+    opacity: 0;
+    &:hover{
+        color: $text-c1-red;
+    }
+    i{
+        font-size: $text-xl;
     }
 }
-
+.cd-top--is-visible{
+    visibility: visible;
+    opacity: 1;
+}
 
 
 // Register
@@ -420,7 +557,7 @@ header {
         height: 50px;
         position: relative;
         border: 1px solid $text-c1-dark;
-        width: 1280px;
+        // width: 1280px;
 
         .container {
             .logo {
@@ -441,7 +578,7 @@ header {
                 .buy {
                     display: flex;
                     position: absolute;
-                    left: 1027px;
+                    left: 1227px;
                     right: 53.03%;
                     top: 8.33%;
                     bottom: 5.56%;
@@ -459,7 +596,7 @@ header {
 
                 .test {
                     position: absolute;
-                    left: 1058px;
+                    left: 1258px;
                     right: 0;
                     top: 0;
                     bottom: 0;
@@ -476,7 +613,7 @@ header {
                     width: 91px;
                     height: 32px;
                     top: 10px;
-                    left: 1103px;
+                    left: 1303px;
 
                     .login-user {
                         @include text($text-s, $text-light, $text-c2-light);
@@ -491,7 +628,7 @@ header {
                     width: 90px;
                     height: 32px;
                     top: 10px;
-                    left: 1170px;
+                    left: 1370px;
 
                     .register-user {
                         @include text($text-s, $text-light , $text-c2-light );
@@ -507,7 +644,6 @@ header {
 
 .menu-register {
     position: relative;
-    width: 1280px;
     height: 50px;
     list-style: none;
 
@@ -589,16 +725,12 @@ header {
 
 .register-content {
     position: relative;
-    width: 1280px;
     height: 538px;
     background: $bg-c2-light;
 
     .top {
-        position: absolute;
-        width: 156px;
-        height: 48px;
-        left: 524px;
-        top: 30px;
+        text-align: center;
+        padding-top: 30px;
 
         h3 {
             @include text($text-xl, $text-regular , $text-c1-dark );
@@ -611,19 +743,19 @@ header {
         #email {
             position: absolute;
             top: 130px;
-            left: 120px;
+            left: 270px;
             bottom: 362px;
             border: none;
             @include text($text-x, $text-regular , $text-c1-dark );
             line-height: 36px;
-            width: 35%;
+            width: 30%;
         }
 
         .star-1 {
             position: absolute;
             top: 149px;
             bottom: 355px;
-            left: 578px;
+            left: 738px;
             right: 469px;
             @include text($text-sl, $text-regular , $text-c1-red );
             line-height: 24px;
@@ -634,7 +766,7 @@ header {
             width: 482px;
             top: 191px;
             bottom: 347px;
-            left: 120px;
+            left: 270px;
             border-bottom: 5px solid $text-c1-violet;
         }
 
@@ -642,17 +774,17 @@ header {
             position: absolute;
             top: 130px;
             bottom: 347px;
-            left: 701px;
+            left: 851px;
             border: none;
             @include text($text-x, $text-regular , $text-c1-dark );
             line-height: 36px;
-            width: 35%;
+            width: 30%;
         }
 
         .star-4 {
             position: absolute;
             top: 149px;
-            left: 1159px;
+            left: 1309px;
             right: 112px;
             bottom: 355px;
             @include text($text-sl, $text-regular , $text-c1-red );
@@ -664,26 +796,26 @@ header {
             width: 482px;
             top: 191px;
             bottom: 347px;
-            left: 701px;
+            left: 851px;
             border-bottom: 5px solid $text-c1-violet;
         }
 
         #password {
             position: absolute;
-            left: 120px;
+            left: 270px;
             right: 814px;
             top: 208px;
             bottom: 284px;
             border: none;
             @include text($text-x, $text-regular , $text-c1-dark );
             line-height: 36px;
-            width: 35%;
+            width: 30%;
         }
 
         .star-2 {
             position: absolute;
             top: 227px;
-            left: 578px;
+            left: 738px;
             right: 469px;
             bottom: 277px;
             @include text($text-sl, $text-regular , $text-c1-red );
@@ -695,26 +827,26 @@ header {
             width: 482px;
             top: 269px;
             bottom: 269px;
-            left: 120px;
+            left: 270px;
             border-bottom: 5px solid $text-c1-violet;
         }
 
         #phone {
             position: absolute;
-            left: 696px;
+            left: 846px;
             right: 814px;
             top: 208px;
             bottom: 284px;
             border: none;
             @include text($text-x, $text-regular , $text-c1-dark );
             line-height: 36px;
-            width: 35%;
+            width: 30%;
         }
 
         .star-5 {
             position: absolute;
             top: 227px;
-            left: 1159px;
+            left: 1309px;
             right: 107px;
             bottom: 277px;
             @include text($text-sl, $text-regular , $text-c1-red );
@@ -726,26 +858,26 @@ header {
             width: 482px;
             top: 269px;
             bottom: 269px;
-            left: 696px;
+            left: 846px;
             border-bottom: 5px solid $text-c1-violet;
         }
 
         #password-comfirm {
             position: absolute;
-            left: 120px;
+            left: 270px;
             right: 814px;
             top: 292px;
             bottom: 200px;
             border: none;
             @include text($text-x, $text-regular , $text-c1-dark );
             line-height: 36px;
-            width: 35%;
+            width: 30%;
         }
 
         .star-3 {
             position: absolute;
             top: 311px;
-            left: 578px;
+            left: 728px;
             right: 469px;
             bottom: 193px;
             @include text($text-sl, $text-regular , $text-c1-red );
@@ -757,7 +889,7 @@ header {
             width: 482px;
             top: 353px;
             bottom: 185px;
-            left: 120px;
+            left: 270px;
             border-bottom: 5px solid $text-c1-violet;
         }
 
@@ -765,7 +897,7 @@ header {
             position: absolute;
             width: 105px;
             height: 36px;
-            left: 696px;
+            left: 846px;
             top: 327px;
             @include text($text-x, $text-regular , $text-c1-dark );
             line-height: 36px;
@@ -774,7 +906,7 @@ header {
         .male {
             position: absolute;
             top: 323px;
-            left: 908px;
+            left: 1058px;
             @include text($text-x, $text-regular , $text-c1-dark );
 
             &:hover input~.checkmark {
@@ -822,7 +954,7 @@ header {
         .female {
             position: absolute;
             top: 323px;
-            left: 1102px;
+            left: 1252px;
             @include text($text-x, $text-regular , $text-c1-dark );
 
             &:hover input~.checkmark {
@@ -871,7 +1003,7 @@ header {
     .btn-submit {
         position: absolute;
         top: 454px;
-        left: 701px;
+        left: 851px;
         right: 386.94px;
         bottom: 52px;
 
@@ -882,7 +1014,108 @@ header {
 }
 
 footer {
-    position: absolute;
-    width: 1280px;
-    height: 242px;
+    padding-top: 30px;
+    .footer-top-1{
+        background: $bg-c3-light;
+        padding: 30px 0;
+        .container{
+            .row{
+                .get-footer{
+                    border-right: 2px solid rgba(222,221,220,0.5);
+                    h4{
+                        @include text($text-base,$text-semibold ,$text-c1-dark );
+                        padding-bottom: 5px;
+                    }
+                    ul{
+                        list-style: none;
+                        li{
+                            a{
+                                @include text-a($text-s,$text-light ,$text-c1-dark , $text-c1-red);
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+                .order-footer{
+                    border-right: 2px solid rgba(222,221,220,0.5);
+                    h4{
+                        @include text($text-base,$text-semibold ,$text-c1-dark );
+                        padding-bottom: 5px;
+                    }
+                    ul{
+                        list-style: none;
+                        li{
+                            a{
+                                @include text-a($text-s,$text-light ,$text-c1-dark , $text-c1-red);
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+                .register-footer{
+                    h4{
+                        @include text($text-base,$text-semibold ,$text-c1-dark );
+                        padding-bottom: 5px;
+                    }
+                    p{
+                        @include text($text-s,$text-light ,$text-c1-dark );
+                    }
+                    a{
+                        @include text-a($text-s,$text-light ,$text-c1-red , $text-c1-blue);
+                        text-decoration: none;
+                    }
+                }
+
+            }
+        }
+    }
+    .footer-bottom-1{
+        background: $bg-c1-grey;
+        padding: 30px 0;
+        .container{
+            .row{
+                .sign-footer{
+                    border-right: 2px solid $bg-c4-grey;
+                    h4{
+                        @include text($text-base,$text-semibold ,$text-c1-dark );
+                        padding-bottom: 5px;
+                    }
+                    p{
+                        @include text($text-s,$text-light ,$text-c1-dark );
+                    }
+                    a{
+                        @include text-a($text-s,$text-light ,$text-c1-red , $text-c1-blue);
+                        text-decoration: none;
+                    }
+                }
+                .gift-footer{
+                    border-right: 2px solid $bg-c4-grey;
+                    h4{ 
+                        @include text($text-base,$text-semibold ,$text-c1-dark );
+                        padding-bottom: 5px;
+                    }
+                    p{
+                        @include text($text-s,$text-light ,$text-c1-dark );
+                    }
+                    a{
+                        @include text-a($text-s,$text-light ,$text-c1-red , $text-c1-blue);
+                        text-decoration: none;
+                    }
+                }
+                .store-footer{
+                    h4{
+                        @include text($text-base,$text-semibold ,$text-c1-dark );
+                        padding-bottom: 5px;
+                    }
+                    p{
+                        @include text($text-s,$text-light ,$text-c1-dark );
+                    }
+                    a{
+                        @include text-a($text-s,$text-light ,$text-c1-red , $text-c1-blue);
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
 }
