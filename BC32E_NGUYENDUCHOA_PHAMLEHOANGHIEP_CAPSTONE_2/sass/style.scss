@@ -390,7 +390,7 @@ header {
     }
 
     #feature-content {
-        padding-top: 89px;
+        padding-top: 90px;
 
         .row {
             @media (max-width:1200px) {
@@ -409,7 +409,7 @@ header {
                 max-width: 30%;
                 flex: 0 0 30%;
                 width: 334px;
-                height: 460px;
+                height: 500px;
                 background-color: $bg-c3-light;
                 margin-right: 38px;
                 margin-bottom: 50px;
@@ -430,7 +430,7 @@ header {
 
                 .bottom-1 {
                     margin-left: 10px;
-                    margin-top: 30px;
+                    margin-top: 20px;
                     @include text($text-base, $text-light , $text-c1-dark );
                     line-height: 29px;
 
@@ -462,7 +462,7 @@ header {
                         flex: 0 0 50%;
                         @include button($text-base, $text-small , $text-c1-dark , $bg-c2-yellow , 17px 27px 18px 39px, 1px solid $bg-c2-yellow , none, $bg-c1-light, $text-c2-yellow);
 
-                        @media (max-width:992px) {
+                        @media (max-width:1200px) {
                             @include button($text-s, $text-small , $text-c1-dark , $bg-c2-yellow , 10px 20px 10px 20px, 1px solid $bg-c2-yellow , none, $bg-c1-light, $text-c2-yellow);
                         }
                     }
@@ -476,7 +476,7 @@ header {
                         background-color: $bg-c1-grey;
                         padding: 17px 40px 18px 66px;
 
-                        @media (max-width:992px) {
+                        @media (max-width:1200px) {
                             @include text($text-s, $text-semibold , $text-c1-dark );
                             line-height: 20px;
                             padding: 10px 20px 10px 20px;
@@ -503,7 +503,7 @@ header {
                 .col-sm-12 {
                     max-width: 100%;
                     flex: 0 0 100%;
-                    height: 400px;
+                    height: 350px;
                 }
             }
         }
@@ -996,112 +996,121 @@ header {
 
                 .gen {
                     padding: 25px 0;
+                    display: flex;
+
                     .gender-1 {
                         @include text($text-x, $text-regular , $text-c1-dark );
                         line-height: 36px;
                     }
 
-                    .male {
-                        @include text($text-x, $text-regular , $text-c1-dark );
-                        padding-left: 80px;
-                        position: relative;
-                        @media (max-width:1200px){
-                            padding-left: 80px;
-                        }
-                        &:hover input~.checkmark {
-                            background-color: $bg-c3-grey;
-                        }
-            
-                        & input:checked~.checkmark {
-                            background-color: $bg-c2-grey;
-                        }
-            
-                        & input:checked~.checkmark::after {
-                            display: block;
-                        }
-            
-                        & .checkmark::after {
-                            position: absolute;
-                            width: 39.25px;
-                            height: 30px;
-                            border-radius: 50%;
-                            top: 10px;
-                            left: 13px;
-                            background-color: $bg-c1-violet;
-                        }
-            
-                        .checkmark {
-                            position: absolute;
-                            border-radius: 50%;
-                            background-color: $bg-c2-grey;
-                            height: 50px;
-                            width: 65.42px;
-                            right: 100px;
-            
-                            &::after {
-                                content: "";
-                                position: absolute;
-                                display: none;
+                    .tickcheck {
+                        .male {
+                            @include text($text-x, $text-regular , $text-c1-dark );
+                            margin-left: 80px;
+                            position: relative;
+
+                            &:hover input~.checkmark {
+                                background-color: $bg-c3-grey;
                             }
-                        }
-            
-                        #male {
-                            opacity: 0;
-            
+
+                            & input:checked~.checkmark {
+                                background-color: $bg-c2-grey;
+                            }
+
+                            & input:checked~.checkmark::after {
+                                display: block;
+                            }
+
+                            & .checkmark::after {
+                                position: absolute;
+                                width: 39.25px;
+                                height: 30px;
+                                border-radius: 50%;
+                                top: 10px;
+                                left: 13px;
+                                background-color: $bg-c1-violet;
+                            }
+
+                            .checkmark {
+                                position: absolute;
+                                border-radius: 50%;
+                                background-color: $bg-c2-grey;
+                                height: 50px;
+                                width: 65.42px;
+                                right: 100px;
+
+                                &::after {
+                                    content: "";
+                                    position: absolute;
+                                    display: none;
+                                }
+                            }
+
+                            #male {
+                                opacity: 0;
+
+                            }
+
                         }
 
+                        .female {
+                            @include text($text-x, $text-regular , $text-c1-dark );
+                            margin-left: 80px;
+                            position: relative;
+                            &:hover input~.checkmark {
+                                background-color: $bg-c3-grey;
+                            }
+
+                            & input:checked~.checkmark {
+                                background-color: $bg-c2-grey;
+                            }
+
+                            & input:checked~.checkmark::after {
+                                display: block;
+                            }
+
+                            & .checkmark::after {
+                                position: absolute;
+                                width: 39.25px;
+                                height: 30px;
+                                border-radius: 50%;
+                                top: 10px;
+                                left: 13px;
+                                background-color: $bg-c1-violet;
+                            }
+
+                            .checkmark {
+                                position: absolute;
+                                border-radius: 50%;
+                                background-color: $bg-c2-grey;
+                                height: 50px;
+                                width: 65.42px;
+                                right: 140px;
+
+                                @media (max-width:1200px) {
+                                    right: 135px;
+                                }
+
+                                &::after {
+                                    content: "";
+                                    position: absolute;
+                                    display: none;
+                                }
+                            }
+
+                            #female {
+                                opacity: 0;
+
+                            }
+
+                        }
                     }
 
-                    .female {
-                        @include text($text-x, $text-regular , $text-c1-dark );
-                        padding-left: 80px;
-                        position: relative;
-                        &:hover input~.checkmark {
-                            background-color: $bg-c3-grey;
-                        }
-            
-                        & input:checked~.checkmark {
-                            background-color: $bg-c2-grey;
-                        }
-            
-                        & input:checked~.checkmark::after {
-                            display: block;
-                        }
-            
-                        & .checkmark::after {
-                            position: absolute;
-                            width: 39.25px;
-                            height: 30px;
-                            border-radius: 50%;
-                            top: 10px;
-                            left: 13px;
-                            background-color: $bg-c1-violet;
-                        }
-            
-                        .checkmark {
-                            position: absolute;
-                            border-radius: 50%;
-                            background-color: $bg-c2-grey;
-                            height: 50px;
-                            width: 65.42px;
-                            right: 140px;
-            
-                            &::after {
-                                content: "";
-                                position: absolute;
-                                display: none;
-                            }
-                        }
-            
-                        #female {
-                            opacity: 0;
-            
-                        }
-
-                    }
                 }
-                .btn-submit-all{
+
+                .btn-submit-all {
                     padding-top: 50px;
+
                     .btn-submit-1 {
                         @include button($text-x, $text-regular , $text-c3-light , $bg-c1-violet , 6px 98.94px 12px 87.3px, none, none, $bg-c1-violet, $text-c3-light);
                     }
@@ -1175,6 +1184,7 @@ footer {
                         text-decoration: none;
                     }
                 }
+
                 @media (max-width:768px) {
                     .col-4 {
                         max-width: 100%;
@@ -1257,6 +1267,7 @@ footer {
                         text-decoration: none;
                     }
                 }
+
                 @media (max-width:768px) {
                     .col-4 {
                         max-width: 100%;
