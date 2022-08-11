@@ -926,6 +926,7 @@ header .header-register .service .register .register-user {
 }
 .register-content .container .row .register-right .gen {
   padding: 25px 0;
+  display: flex;
 }
 .register-content .container .row .register-right .gen .gender-1 {
   font-size: 30px;
@@ -933,28 +934,23 @@ header .header-register .service .register .register-user {
   color: #000000;
   line-height: 36px;
 }
-.register-content .container .row .register-right .gen .male {
+.register-content .container .row .register-right .gen .tickcheck .male {
   font-size: 30px;
   font-weight: 400;
   color: #000000;
-  padding-left: 80px;
+  margin-left: 80px;
   position: relative;
 }
-@media (max-width: 1200px) {
-  .register-content .container .row .register-right .gen .male {
-    padding-left: 80px;
-  }
-}
-.register-content .container .row .register-right .gen .male:hover input ~ .checkmark {
+.register-content .container .row .register-right .gen .tickcheck .male:hover input ~ .checkmark {
   background-color: #ccc;
 }
-.register-content .container .row .register-right .gen .male input:checked ~ .checkmark {
+.register-content .container .row .register-right .gen .tickcheck .male input:checked ~ .checkmark {
   background-color: #D9D9D9;
 }
-.register-content .container .row .register-right .gen .male input:checked ~ .checkmark::after {
+.register-content .container .row .register-right .gen .tickcheck .male input:checked ~ .checkmark::after {
   display: block;
 }
-.register-content .container .row .register-right .gen .male .checkmark::after {
+.register-content .container .row .register-right .gen .tickcheck .male .checkmark::after {
   position: absolute;
   width: 39.25px;
   height: 30px;
@@ -963,7 +959,7 @@ header .header-register .service .register .register-user {
   left: 13px;
   background-color: #AE18E2;
 }
-.register-content .container .row .register-right .gen .male .checkmark {
+.register-content .container .row .register-right .gen .tickcheck .male .checkmark {
   position: absolute;
   border-radius: 50%;
   background-color: #D9D9D9;
@@ -971,31 +967,31 @@ header .header-register .service .register .register-user {
   width: 65.42px;
   right: 100px;
 }
-.register-content .container .row .register-right .gen .male .checkmark::after {
+.register-content .container .row .register-right .gen .tickcheck .male .checkmark::after {
   content: "";
   position: absolute;
   display: none;
 }
-.register-content .container .row .register-right .gen .male #male {
+.register-content .container .row .register-right .gen .tickcheck .male #male {
   opacity: 0;
 }
-.register-content .container .row .register-right .gen .female {
+.register-content .container .row .register-right .gen .tickcheck .female {
   font-size: 30px;
   font-weight: 400;
   color: #000000;
-  padding-left: 80px;
+  margin-left: 80px;
   position: relative;
 }
-.register-content .container .row .register-right .gen .female:hover input ~ .checkmark {
+.register-content .container .row .register-right .gen .tickcheck .female:hover input ~ .checkmark {
   background-color: #ccc;
 }
-.register-content .container .row .register-right .gen .female input:checked ~ .checkmark {
+.register-content .container .row .register-right .gen .tickcheck .female input:checked ~ .checkmark {
   background-color: #D9D9D9;
 }
-.register-content .container .row .register-right .gen .female input:checked ~ .checkmark::after {
+.register-content .container .row .register-right .gen .tickcheck .female input:checked ~ .checkmark::after {
   display: block;
 }
-.register-content .container .row .register-right .gen .female .checkmark::after {
+.register-content .container .row .register-right .gen .tickcheck .female .checkmark::after {
   position: absolute;
   width: 39.25px;
   height: 30px;
@@ -1004,7 +1000,7 @@ header .header-register .service .register .register-user {
   left: 13px;
   background-color: #AE18E2;
 }
-.register-content .container .row .register-right .gen .female .checkmark {
+.register-content .container .row .register-right .gen .tickcheck .female .checkmark {
   position: absolute;
   border-radius: 50%;
   background-color: #D9D9D9;
@@ -1012,12 +1008,17 @@ header .header-register .service .register .register-user {
   width: 65.42px;
   right: 140px;
 }
-.register-content .container .row .register-right .gen .female .checkmark::after {
+@media (max-width: 1200px) {
+  .register-content .container .row .register-right .gen .tickcheck .female .checkmark {
+    right: 135px;
+  }
+}
+.register-content .container .row .register-right .gen .tickcheck .female .checkmark::after {
   content: "";
   position: absolute;
   display: none;
 }
-.register-content .container .row .register-right .gen .female #female {
+.register-content .container .row .register-right .gen .tickcheck .female #female {
   opacity: 0;
 }
 .register-content .container .row .register-right .btn-submit-all {
