@@ -10,52 +10,39 @@ header .header-index {
   height: 50px;
   position: relative;
   border: 1px solid #000000;
+  display: flex;
+  justify-content: space-between;
 }
-header .header-index .container .logo .logo-cyber img {
-  position: absolute;
+header .header-index .logo .logo-cyber img {
   width: 116px;
   height: 32px;
-  left: 24px;
-  top: 10px;
+  margin-left: 24px;
+  margin-top: 10px;
 }
-header .header-index .container .service {
+header .header-index .service {
+  display: flex;
+  margin-top: 10px;
+}
+header .header-index .service .buy {
   display: flex;
 }
-header .header-index .container .service .buy {
-  display: flex;
-  position: absolute;
-  left: 1227px;
-  right: 53.03%;
-  top: 8.33%;
-  bottom: 5.56%;
-}
-header .header-index .container .service .buy .logo-buy img {
+header .header-index .service .buy .logo-buy img {
   width: 31px;
   height: 31px;
   top: 3px;
 }
-header .header-index .container .service .test {
-  position: absolute;
-  left: 1258px;
-  right: 0;
-  top: 0;
-  bottom: 0;
-}
-header .header-index .container .service .test .txt {
+header .header-index .service .test .txt {
   font-style: normal;
   line-height: 36px;
   font-size: 30px;
   font-weight: 300;
   color: #FFFFFF;
 }
-header .header-index .container .service .login {
-  position: absolute;
+header .header-index .service .login {
   width: 91px;
   height: 32px;
-  top: 10px;
-  left: 1303px;
 }
-header .header-index .container .service .login .login-user {
+header .header-index .service .login .login-user {
   font-size: 16px;
   font-weight: 300;
   color: #F7F7F7;
@@ -63,14 +50,11 @@ header .header-index .container .service .login .login-user {
   border: 1px solid #000000;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-header .header-index .container .service .register {
-  position: absolute;
+header .header-index .service .register {
   width: 90px;
   height: 32px;
-  top: 10px;
-  left: 1370px;
 }
-header .header-index .container .service .register .register-user {
+header .header-index .service .register .register-user {
   font-size: 16px;
   font-weight: 300;
   color: #F7F7F7;
@@ -162,11 +146,9 @@ header .header-index .container .service .register .register-user {
 
 .carousel-1 .carousel {
   background: #FFFFFF;
-  position: relative;
 }
 .carousel-1 .carousel .carousel-indicators {
-  position: absolute;
-  top: 397px;
+  margin-bottom: 100px;
 }
 .carousel-1 .carousel .carousel-indicators li {
   width: 15px;
@@ -184,36 +166,96 @@ header .header-index .container .service .register .register-user {
   background-repeat: no-repeat;
   background-size: cover;
   height: 530px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.carousel-1 .carousel .carousel-inner .carousel-item .carousel-thumb {
+  width: 50%;
+  flex: 0 0 50%;
+}
+@media (max-width: 720px) {
+  .carousel-1 .carousel .carousel-inner .carousel-item .carousel-thumb {
+    width: 100%;
+  }
 }
 .carousel-1 .carousel .carousel-inner .carousel-item .carousel-thumb img {
   margin-left: 122px;
   width: 821px;
   height: 392px;
 }
-.carousel-1 .carousel .carousel-inner .carousel-item .text-carousel {
-  position: absolute;
-  top: 124px;
-  left: 1130px;
-  right: 59px;
-  bottom: 355px;
+@media (max-width: 1200px) {
+  .carousel-1 .carousel .carousel-inner .carousel-item .carousel-thumb img {
+    margin-left: 80px;
+    width: 700px;
+    height: 391px;
+  }
+}
+@media (max-width: 992px) {
+  .carousel-1 .carousel .carousel-inner .carousel-item .carousel-thumb img {
+    margin-left: 60px;
+    width: 600px;
+    height: 391px;
+  }
+}
+@media (max-width: 720px) {
+  .carousel-1 .carousel .carousel-inner .carousel-item .carousel-thumb img {
+    margin-left: 60px;
+    width: 600px;
+    height: 391px;
+  }
+}
+.carousel-1 .carousel .carousel-inner .carousel-item .carousel-content {
+  margin-top: 124px;
+  flex: 0 0 50%;
+  width: 50%;
+}
+@media (max-width: 720px) {
+  .carousel-1 .carousel .carousel-inner .carousel-item .carousel-content {
+    width: 100%;
+    flex: 0 0 100%;
+    position: absolute;
+    top: 20px;
+    left: 350px;
+  }
+}
+.carousel-1 .carousel .carousel-inner .carousel-item .carousel-content .content-carou {
+  padding-left: 330px;
+}
+@media (max-width: 1200px) {
+  .carousel-1 .carousel .carousel-inner .carousel-item .carousel-content .content-carou {
+    padding-left: 250px;
+  }
+}
+@media (max-width: 1020px) {
+  .carousel-1 .carousel .carousel-inner .carousel-item .carousel-content .content-carou {
+    padding-left: 100px;
+  }
+}
+.carousel-1 .carousel .carousel-inner .carousel-item .carousel-content .content-carou .text-carousel {
   font-size: 40px;
   font-weight: 300;
   color: #000000;
 }
-.carousel-1 .carousel .carousel-inner .carousel-item .text-carousel-2 {
-  position: absolute;
-  top: 175px;
-  left: 1130px;
-  right: 59px;
-  bottom: 304px;
+@media (max-width: 720px) {
+  .carousel-1 .carousel .carousel-inner .carousel-item .carousel-content .content-carou .text-carousel {
+    font-size: 24px;
+    font-weight: 300;
+    color: #000000;
+  }
+}
+.carousel-1 .carousel .carousel-inner .carousel-item .carousel-content .content-carou .text-carousel-2 {
   font-size: 20px;
   font-weight: 300;
   color: #000000;
 }
-.carousel-1 .carousel .carousel-inner .carousel-item .btn-buy {
-  position: absolute;
-  top: 225px;
-  left: 1130px;
+@media (max-width: 720px) {
+  .carousel-1 .carousel .carousel-inner .carousel-item .carousel-content .content-carou .text-carousel-2 {
+    font-size: 16px;
+    font-weight: 300;
+    color: #000000;
+  }
+}
+.carousel-1 .carousel .carousel-inner .carousel-item .carousel-content .content-carou .btn-buy {
   font-size: 20px;
   font-weight: 300;
   color: #FFFFFF;
@@ -223,22 +265,38 @@ header .header-index .container .service .register .register-user {
   border-radius: none;
   cursor: pointer;
 }
-.carousel-1 .carousel .carousel-inner .carousel-item .btn-buy:hover {
+.carousel-1 .carousel .carousel-inner .carousel-item .carousel-content .content-carou .btn-buy:hover {
   background-color: #FFFFFF;
   color: #F8B653;
 }
-.carousel-1 .carousel .carousel-control-prev {
-  position: absolute;
-  top: -100px;
-  left: -70px;
+@media (max-width: 720px) {
+  .carousel-1 .carousel .carousel-inner .carousel-item .carousel-content .content-carou .btn-buy {
+    font-size: 16px;
+    font-weight: 300;
+    color: #FFFFFF;
+    background: #F8B653;
+    padding: 5px 35px 5px 34px;
+    border: 1px solid #F8B653;
+    border-radius: none;
+    cursor: pointer;
+  }
+  .carousel-1 .carousel .carousel-inner .carousel-item .carousel-content .content-carou .btn-buy:hover {
+    background-color: #FFFFFF;
+    color: #F8B653;
+  }
 }
-.carousel-1 .carousel .carousel-control-next {
-  position: absolute;
-  top: -100px;
+.carousel-1 .carousel-control-prev {
+  margin-left: -50px;
 }
-.carousel-1 .carousel .carousel-control-next img {
-  position: absolute;
-  right: 25px;
+@media (max-width: 1470px) {
+  .carousel-1 .carousel-control-prev {
+    display: none;
+  }
+}
+@media (max-width: 1470px) {
+  .carousel-1 .carousel-control-next {
+    display: none;
+  }
 }
 
 .feature {
@@ -258,30 +316,44 @@ header .header-index .container .service .register .register-user {
 .feature #feature-content {
   padding-top: 89px;
 }
-.feature #feature-content .feature-row {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: 100px;
-  padding-right: 30px;
+@media (max-width: 1200px) {
+  .feature #feature-content .row {
+    padding-left: 100px;
+  }
 }
-.feature #feature-content .feature-row .card-product {
+@media (max-width: 992px) {
+  .feature #feature-content .row {
+    padding-left: 70px;
+  }
+}
+@media (max-width: 768px) {
+  .feature #feature-content .row {
+    padding-left: 0px;
+  }
+}
+.feature #feature-content .row .col-lg-4 {
   max-width: 30%;
   flex: 0 0 30%;
   width: 334px;
   height: 460px;
   background-color: #F8F8F8;
-  margin-right: 40px;
+  margin-right: 38px;
   margin-bottom: 50px;
-  position: relative;
 }
-.feature #feature-content .feature-row .card-product .img-top {
+.feature #feature-content .row .col-lg-4 .img-top {
   text-align: center;
 }
-.feature #feature-content .feature-row .card-product .img-top img {
+.feature #feature-content .row .col-lg-4 .img-top img {
   width: 220px;
   height: 220px;
 }
-.feature #feature-content .feature-row .card-product .bottom-1 {
+@media (max-width: 992px) {
+  .feature #feature-content .row .col-lg-4 .img-top img {
+    width: 150px;
+    height: 150px;
+  }
+}
+.feature #feature-content .row .col-lg-4 .bottom-1 {
   margin-left: 10px;
   margin-top: 30px;
   font-size: 24px;
@@ -289,21 +361,32 @@ header .header-index .container .service .register .register-user {
   color: #000000;
   line-height: 29px;
 }
-.feature #feature-content .feature-row .card-product .bottom-2 {
+@media (max-width: 992px) {
+  .feature #feature-content .row .col-lg-4 .bottom-1 {
+    font-size: 20px;
+  }
+}
+.feature #feature-content .row .col-lg-4 .bottom-2 {
   margin-left: 10px;
   font-size: 20px;
   font-weight: 300;
   color: #CBC9C9;
   line-height: 24px;
 }
-.feature #feature-content .feature-row .card-product .btn-buy-2 {
+@media (max-width: 992px) {
+  .feature #feature-content .row .col-lg-4 .bottom-2 {
+    font-size: 16px;
+  }
+}
+.feature #feature-content .row .col-lg-4 .btn-buy-2 {
   display: flex;
   flex-wrap: wrap;
   position: absolute;
   bottom: 0;
+  left: 0;
   width: 100%;
 }
-.feature #feature-content .feature-row .card-product .btn-buy-2 .btn-buy-shose {
+.feature #feature-content .row .col-lg-4 .btn-buy-2 .btn-buy-shose {
   width: 50%;
   flex: 0 0 50%;
   font-size: 24px;
@@ -315,11 +398,27 @@ header .header-index .container .service .register .register-user {
   border-radius: none;
   cursor: pointer;
 }
-.feature #feature-content .feature-row .card-product .btn-buy-2 .btn-buy-shose:hover {
+.feature #feature-content .row .col-lg-4 .btn-buy-2 .btn-buy-shose:hover {
   background-color: #FFFFFF;
   color: #E1B067;
 }
-.feature #feature-content .feature-row .card-product .btn-buy-2 span {
+@media (max-width: 992px) {
+  .feature #feature-content .row .col-lg-4 .btn-buy-2 .btn-buy-shose {
+    font-size: 16px;
+    font-weight: 200;
+    color: #000000;
+    background: #E1B067;
+    padding: 10px 20px 10px 20px;
+    border: 1px solid #E1B067;
+    border-radius: none;
+    cursor: pointer;
+  }
+  .feature #feature-content .row .col-lg-4 .btn-buy-2 .btn-buy-shose:hover {
+    background-color: #FFFFFF;
+    color: #E1B067;
+  }
+}
+.feature #feature-content .row .col-lg-4 .btn-buy-2 span {
   text-align: center;
   width: 50%;
   flex: 0 0 50%;
@@ -329,6 +428,34 @@ header .header-index .container .service .register .register-user {
   line-height: 35px;
   background-color: #DEDDDC;
   padding: 17px 40px 18px 66px;
+}
+@media (max-width: 992px) {
+  .feature #feature-content .row .col-lg-4 .btn-buy-2 span {
+    font-size: 16px;
+    font-weight: 600;
+    color: #000000;
+    line-height: 20px;
+    padding: 10px 20px 10px 20px;
+  }
+}
+@media (max-width: 1200px) {
+  .feature #feature-content .row .col-md-6 {
+    max-width: 40%;
+    flex: 0 0 40%;
+    height: 490px;
+  }
+}
+@media (max-width: 1200px) and (max-width: 992px) {
+  .feature #feature-content .row .col-md-6 {
+    height: 450px;
+  }
+}
+@media (max-width: 768px) {
+  .feature #feature-content .row .col-sm-12 {
+    max-width: 100%;
+    flex: 0 0 100%;
+    height: 400px;
+  }
 }
 
 footer .footer-top {
@@ -399,6 +526,23 @@ footer .footer-top .container .row .register-footer a {
 }
 footer .footer-top .container .row .register-footer a:hover {
   color: #0000FF;
+}
+@media (max-width: 768px) {
+  footer .footer-top .container .row .col-4 {
+    max-width: 100%;
+    flex: 0 0 100%;
+    text-align: center;
+  }
+  footer .footer-top .container .row .get-footer {
+    border-right: none;
+    border-bottom: 2px solid rgba(222, 221, 220, 0.5);
+    margin-bottom: 10px;
+  }
+  footer .footer-top .container .row .order-footer {
+    border-right: none;
+    border-bottom: 2px solid rgba(222, 221, 220, 0.5);
+    margin-bottom: 10px;
+  }
 }
 footer .footer-bottom {
   background: #DEDDDC;
@@ -473,6 +617,23 @@ footer .footer-bottom .container .row .store-footer a {
 footer .footer-bottom .container .row .store-footer a:hover {
   color: #0000FF;
 }
+@media (max-width: 768px) {
+  footer .footer-bottom .container .row .col-4 {
+    max-width: 100%;
+    flex: 0 0 100%;
+    text-align: center;
+  }
+  footer .footer-bottom .container .row .sign-footer {
+    border-right: none;
+    border-bottom: 2px solid #bbc4cc;
+    margin-bottom: 20px;
+  }
+  footer .footer-bottom .container .row .gift-footer {
+    border-right: none;
+    border-bottom: 2px solid #bbc4cc;
+    margin-bottom: 20px;
+  }
+}
 
 .backToTop {
   width: 50px;
@@ -504,52 +665,39 @@ header .header-register {
   height: 50px;
   position: relative;
   border: 1px solid #000000;
+  display: flex;
+  justify-content: space-between;
 }
-header .header-register .container .logo .logo-cyber img {
-  position: absolute;
+header .header-register .logo .logo-cyber img {
   width: 116px;
   height: 32px;
-  left: 24px;
-  top: 10px;
+  margin-left: 24px;
+  margin-top: 10px;
 }
-header .header-register .container .service {
+header .header-register .service {
+  display: flex;
+  margin-top: 10px;
+}
+header .header-register .service .buy {
   display: flex;
 }
-header .header-register .container .service .buy {
-  display: flex;
-  position: absolute;
-  left: 1227px;
-  right: 53.03%;
-  top: 8.33%;
-  bottom: 5.56%;
-}
-header .header-register .container .service .buy .logo-buy img {
+header .header-register .service .buy .logo-buy img {
   width: 31px;
   height: 31px;
   top: 3px;
 }
-header .header-register .container .service .test {
-  position: absolute;
-  left: 1258px;
-  right: 0;
-  top: 0;
-  bottom: 0;
-}
-header .header-register .container .service .test .txt {
+header .header-register .service .test .txt {
   font-style: normal;
   line-height: 36px;
   font-size: 30px;
   font-weight: 300;
   color: #FFFFFF;
 }
-header .header-register .container .service .login {
-  position: absolute;
+header .header-register .service .login {
   width: 91px;
   height: 32px;
-  top: 10px;
-  left: 1303px;
 }
-header .header-register .container .service .login .login-user {
+header .header-register .service .login .login-user {
   font-size: 16px;
   font-weight: 300;
   color: #F7F7F7;
@@ -557,14 +705,11 @@ header .header-register .container .service .login .login-user {
   border: 1px solid #000000;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-header .header-register .container .service .register {
-  position: absolute;
+header .header-register .service .register {
   width: 90px;
   height: 32px;
-  top: 10px;
-  left: 1370px;
 }
-header .header-register .container .service .register .register-user {
+header .header-register .service .register .register-user {
   font-size: 16px;
   font-weight: 300;
   color: #F7F7F7;
@@ -656,7 +801,6 @@ header .header-register .container .service .register .register-user {
 
 .register-content {
   position: relative;
-  height: 538px;
   background: #FFFCFC;
 }
 .register-content .top {
@@ -670,193 +814,148 @@ header .header-register .container .service .register .register-user {
   font-style: normal;
   line-height: 48px;
 }
-.register-content .bottom #email {
-  position: absolute;
-  top: 130px;
-  left: 270px;
-  bottom: 362px;
+.register-content .container .row .register-left .email {
+  display: flex;
+  border-bottom: 5px solid #AE18E2;
+  margin-bottom: 10px;
+}
+.register-content .container .row .register-left .email #email {
   border: none;
   font-size: 30px;
   font-weight: 400;
   color: #000000;
   line-height: 36px;
-  width: 30%;
+  width: 90%;
 }
-.register-content .bottom .star-1 {
-  position: absolute;
-  top: 149px;
-  bottom: 355px;
-  left: 738px;
-  right: 469px;
+.register-content .container .row .register-left .email .star-1 {
   font-size: 20px;
   font-weight: 400;
   color: #F50E0E;
   line-height: 24px;
+  padding-top: 15px;
+  width: 10%;
+  text-align: center;
 }
-.register-content .bottom .line-1 {
-  position: absolute;
-  width: 482px;
-  top: 191px;
-  bottom: 347px;
-  left: 270px;
+.register-content .container .row .register-left .password {
+  display: flex;
   border-bottom: 5px solid #AE18E2;
+  margin-bottom: 10px;
 }
-.register-content .bottom #name {
-  position: absolute;
-  top: 130px;
-  bottom: 347px;
-  left: 851px;
+.register-content .container .row .register-left .password #password {
   border: none;
   font-size: 30px;
   font-weight: 400;
   color: #000000;
   line-height: 36px;
-  width: 30%;
+  width: 90%;
 }
-.register-content .bottom .star-4 {
-  position: absolute;
-  top: 149px;
-  left: 1309px;
-  right: 112px;
-  bottom: 355px;
+.register-content .container .row .register-left .password .star-2 {
   font-size: 20px;
   font-weight: 400;
   color: #F50E0E;
   line-height: 24px;
+  padding-top: 15px;
+  width: 10%;
+  text-align: center;
 }
-.register-content .bottom .line-4 {
-  position: absolute;
-  width: 482px;
-  top: 191px;
-  bottom: 347px;
-  left: 851px;
+.register-content .container .row .register-left .password-comfirm {
+  display: flex;
   border-bottom: 5px solid #AE18E2;
+  margin-bottom: 10px;
 }
-.register-content .bottom #password {
-  position: absolute;
-  left: 270px;
-  right: 814px;
-  top: 208px;
-  bottom: 284px;
+.register-content .container .row .register-left .password-comfirm #password-comfirm {
   border: none;
   font-size: 30px;
   font-weight: 400;
   color: #000000;
   line-height: 36px;
-  width: 30%;
+  width: 90%;
 }
-.register-content .bottom .star-2 {
-  position: absolute;
-  top: 227px;
-  left: 738px;
-  right: 469px;
-  bottom: 277px;
+.register-content .container .row .register-left .password-comfirm .star-3 {
   font-size: 20px;
   font-weight: 400;
   color: #F50E0E;
   line-height: 24px;
+  padding-top: 15px;
+  width: 10%;
+  text-align: center;
 }
-.register-content .bottom .line-2 {
-  position: absolute;
-  width: 482px;
-  top: 269px;
-  bottom: 269px;
-  left: 270px;
+.register-content .container .row .register-right .name {
+  display: flex;
   border-bottom: 5px solid #AE18E2;
+  margin-bottom: 10px;
 }
-.register-content .bottom #phone {
-  position: absolute;
-  left: 846px;
-  right: 814px;
-  top: 208px;
-  bottom: 284px;
+.register-content .container .row .register-right .name #name {
   border: none;
   font-size: 30px;
   font-weight: 400;
   color: #000000;
   line-height: 36px;
-  width: 30%;
+  width: 90%;
 }
-.register-content .bottom .star-5 {
-  position: absolute;
-  top: 227px;
-  left: 1309px;
-  right: 107px;
-  bottom: 277px;
+.register-content .container .row .register-right .name .star-4 {
   font-size: 20px;
   font-weight: 400;
   color: #F50E0E;
   line-height: 24px;
+  padding-top: 15px;
+  width: 10%;
+  text-align: center;
 }
-.register-content .bottom .line-5 {
-  position: absolute;
-  width: 482px;
-  top: 269px;
-  bottom: 269px;
-  left: 846px;
+.register-content .container .row .register-right .phone {
+  display: flex;
   border-bottom: 5px solid #AE18E2;
+  margin-bottom: 10px;
 }
-.register-content .bottom #password-comfirm {
-  position: absolute;
-  left: 270px;
-  right: 814px;
-  top: 292px;
-  bottom: 200px;
+.register-content .container .row .register-right .phone #phone {
   border: none;
   font-size: 30px;
   font-weight: 400;
   color: #000000;
   line-height: 36px;
-  width: 30%;
+  width: 90%;
 }
-.register-content .bottom .star-3 {
-  position: absolute;
-  top: 311px;
-  left: 728px;
-  right: 469px;
-  bottom: 193px;
+.register-content .container .row .register-right .phone .star-5 {
   font-size: 20px;
   font-weight: 400;
   color: #F50E0E;
   line-height: 24px;
+  padding-top: 15px;
+  width: 10%;
+  text-align: center;
 }
-.register-content .bottom .line-3 {
-  position: absolute;
-  width: 482px;
-  top: 353px;
-  bottom: 185px;
-  left: 270px;
-  border-bottom: 5px solid #AE18E2;
+.register-content .container .row .register-right .gen {
+  padding: 25px 0;
 }
-.register-content .bottom .gender-1 {
-  position: absolute;
-  width: 105px;
-  height: 36px;
-  left: 846px;
-  top: 327px;
+.register-content .container .row .register-right .gen .gender-1 {
   font-size: 30px;
   font-weight: 400;
   color: #000000;
   line-height: 36px;
 }
-.register-content .bottom .male {
-  position: absolute;
-  top: 323px;
-  left: 1058px;
+.register-content .container .row .register-right .gen .male {
   font-size: 30px;
   font-weight: 400;
   color: #000000;
+  padding-left: 80px;
+  position: relative;
 }
-.register-content .bottom .male:hover input ~ .checkmark {
+@media (max-width: 1200px) {
+  .register-content .container .row .register-right .gen .male {
+    padding-left: 80px;
+  }
+}
+.register-content .container .row .register-right .gen .male:hover input ~ .checkmark {
   background-color: #ccc;
 }
-.register-content .bottom .male input:checked ~ .checkmark {
+.register-content .container .row .register-right .gen .male input:checked ~ .checkmark {
   background-color: #D9D9D9;
 }
-.register-content .bottom .male input:checked ~ .checkmark::after {
+.register-content .container .row .register-right .gen .male input:checked ~ .checkmark::after {
   display: block;
 }
-.register-content .bottom .male .checkmark::after {
+.register-content .container .row .register-right .gen .male .checkmark::after {
+  position: absolute;
   width: 39.25px;
   height: 30px;
   border-radius: 50%;
@@ -864,7 +963,7 @@ header .header-register .container .service .register .register-user {
   left: 13px;
   background-color: #AE18E2;
 }
-.register-content .bottom .male .checkmark {
+.register-content .container .row .register-right .gen .male .checkmark {
   position: absolute;
   border-radius: 50%;
   background-color: #D9D9D9;
@@ -872,32 +971,32 @@ header .header-register .container .service .register .register-user {
   width: 65.42px;
   right: 100px;
 }
-.register-content .bottom .male .checkmark::after {
+.register-content .container .row .register-right .gen .male .checkmark::after {
   content: "";
   position: absolute;
   display: none;
 }
-.register-content .bottom .male #male {
+.register-content .container .row .register-right .gen .male #male {
   opacity: 0;
 }
-.register-content .bottom .female {
-  position: absolute;
-  top: 323px;
-  left: 1252px;
+.register-content .container .row .register-right .gen .female {
   font-size: 30px;
   font-weight: 400;
   color: #000000;
+  padding-left: 80px;
+  position: relative;
 }
-.register-content .bottom .female:hover input ~ .checkmark {
+.register-content .container .row .register-right .gen .female:hover input ~ .checkmark {
   background-color: #ccc;
 }
-.register-content .bottom .female input:checked ~ .checkmark {
+.register-content .container .row .register-right .gen .female input:checked ~ .checkmark {
   background-color: #D9D9D9;
 }
-.register-content .bottom .female input:checked ~ .checkmark::after {
+.register-content .container .row .register-right .gen .female input:checked ~ .checkmark::after {
   display: block;
 }
-.register-content .bottom .female .checkmark::after {
+.register-content .container .row .register-right .gen .female .checkmark::after {
+  position: absolute;
   width: 39.25px;
   height: 30px;
   border-radius: 50%;
@@ -905,7 +1004,7 @@ header .header-register .container .service .register .register-user {
   left: 13px;
   background-color: #AE18E2;
 }
-.register-content .bottom .female .checkmark {
+.register-content .container .row .register-right .gen .female .checkmark {
   position: absolute;
   border-radius: 50%;
   background-color: #D9D9D9;
@@ -913,22 +1012,18 @@ header .header-register .container .service .register .register-user {
   width: 65.42px;
   right: 140px;
 }
-.register-content .bottom .female .checkmark::after {
+.register-content .container .row .register-right .gen .female .checkmark::after {
   content: "";
   position: absolute;
   display: none;
 }
-.register-content .bottom .female #female {
+.register-content .container .row .register-right .gen .female #female {
   opacity: 0;
 }
-.register-content .btn-submit {
-  position: absolute;
-  top: 454px;
-  left: 851px;
-  right: 386.94px;
-  bottom: 52px;
+.register-content .container .row .register-right .btn-submit-all {
+  padding-top: 50px;
 }
-.register-content .btn-submit .btn-submit-1 {
+.register-content .container .row .register-right .btn-submit-all .btn-submit-1 {
   font-size: 30px;
   font-weight: 400;
   color: #FFFCFC;
@@ -938,7 +1033,7 @@ header .header-register .container .service .register .register-user {
   border-radius: none;
   cursor: pointer;
 }
-.register-content .btn-submit .btn-submit-1:hover {
+.register-content .container .row .register-right .btn-submit-all .btn-submit-1:hover {
   background-color: #AE18E2;
   color: #FFFCFC;
 }
@@ -1015,6 +1110,23 @@ footer .footer-top-1 .container .row .register-footer a {
 footer .footer-top-1 .container .row .register-footer a:hover {
   color: #0000FF;
 }
+@media (max-width: 768px) {
+  footer .footer-top-1 .container .row .col-4 {
+    max-width: 100%;
+    flex: 0 0 100%;
+    text-align: center;
+  }
+  footer .footer-top-1 .container .row .get-footer {
+    border-right: none;
+    border-bottom: 2px solid rgba(222, 221, 220, 0.5);
+    margin-bottom: 10px;
+  }
+  footer .footer-top-1 .container .row .order-footer {
+    border-right: none;
+    border-bottom: 2px solid rgba(222, 221, 220, 0.5);
+    margin-bottom: 10px;
+  }
+}
 footer .footer-bottom-1 {
   background: #DEDDDC;
   padding: 30px 0;
@@ -1087,4 +1199,21 @@ footer .footer-bottom-1 .container .row .store-footer a {
 }
 footer .footer-bottom-1 .container .row .store-footer a:hover {
   color: #0000FF;
+}
+@media (max-width: 768px) {
+  footer .footer-bottom-1 .container .row .col-4 {
+    max-width: 100%;
+    flex: 0 0 100%;
+    text-align: center;
+  }
+  footer .footer-bottom-1 .container .row .sign-footer {
+    border-right: none;
+    border-bottom: 2px solid #bbc4cc;
+    margin-bottom: 20px;
+  }
+  footer .footer-bottom-1 .container .row .gift-footer {
+    border-right: none;
+    border-bottom: 2px solid #bbc4cc;
+    margin-bottom: 20px;
+  }
 }

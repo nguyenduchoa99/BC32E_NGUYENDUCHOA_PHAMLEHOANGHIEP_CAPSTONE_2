@@ -30,7 +30,7 @@ $text-c2-light: #F7F7F7;
 $text-c3-light: #FFFCFC;
 $text-c1-dark: #000000;
 $text-c1-yellow: #F8B653;
-$text-c2-yellow:#E1B067;
+$text-c2-yellow: #E1B067;
 $text-c1-grey: #CBC9C9;
 $text-c1-red: #F50E0E;
 $text-c1-violet: #AE18E2;
@@ -44,12 +44,14 @@ $text-c1-blue: #0000FF;
     font-weight: $fw;
     color: $c;
 }
-@mixin text-a($fs: $text-x, $fw:$text-regular,$c:$text-c1-dark,$c-hover){
+
+@mixin text-a($fs: $text-x, $fw: $text-regular, $c: $text-c1-dark, $c-hover) {
     font-size: $fs;
     font-weight: $fw;
     color: $c;
     cursor: pointer;
-    &:hover{
+
+    &:hover {
         color: $c-hover;
     }
 }
@@ -75,9 +77,6 @@ $text-c1-blue: #0000FF;
     box-sizing: border-box;
 }
 
-.container {
-    // width: 1280px;
-}
 
 header {
     .header-index {
@@ -85,89 +84,74 @@ header {
         height: 50px;
         position: relative;
         border: 1px solid $text-c1-dark;
-        // width: 1280px;   
+        display: flex;
+        justify-content: space-between;
 
-        .container {
-            .logo {
-                .logo-cyber {
+        .logo {
+            .logo-cyber {
+                img {
+                    width: 116px;
+                    height: 32px;
+                    margin-left: 24px;
+                    margin-top: 10px;
+                }
+            }
+        }
+
+        .service {
+            display: flex;
+            margin-top: 10px;
+
+            .buy {
+                display: flex;
+
+
+                .logo-buy {
                     img {
-                        position: absolute;
-                        width: 116px;
-                        height: 32px;
-                        left: 24px;
-                        top: 10px;
+                        width: 31px;
+                        height: 31px;
+                        top: 3px;
+
                     }
+                }
+
+            }
+
+            .test {
+
+                .txt {
+                    font-style: normal;
+                    line-height: 36px;
+                    @include text($text-x, $text-light , $text-c1-light );
                 }
             }
 
-            .service {
-                display: flex;
+            .login {
+                width: 91px;
+                height: 32px;
 
-                .buy {
-                    display: flex;
-                    position: absolute;
-                    left: 1227px;
-                    right: 53.03%;
-                    top: 8.33%;
-                    bottom: 5.56%;
-
-                    .logo-buy {
-                        img {
-                            width: 31px;
-                            height: 31px;
-                            top: 3px;
-
-                        }
-                    }
-
+                .login-user {
+                    @include text($text-s, $text-light, $text-c2-light);
+                    line-height: 19px;
+                    border: 1px solid $text-c1-dark;
+                    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
                 }
+            }
 
-                .test {
-                    position: absolute;
-                    left: 1258px;
-                    right: 0;
-                    top: 0;
-                    bottom: 0;
+            .register {
+                width: 90px;
+                height: 32px;
 
-                    .txt {
-                        font-style: normal;
-                        line-height: 36px;
-                        @include text($text-x, $text-light , $text-c1-light );
-                    }
-                }
-
-                .login {
-                    position: absolute;
-                    width: 91px;
-                    height: 32px;
-                    top: 10px;
-                    left: 1303px;
-
-                    .login-user {
-                        @include text($text-s, $text-light, $text-c2-light);
-                        line-height: 19px;
-                        border: 1px solid $text-c1-dark;
-                        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-                    }
-                }
-
-                .register {
-                    position: absolute;
-                    width: 90px;
-                    height: 32px;
-                    top: 10px;
-                    left: 1370px;
-
-                    .register-user {
-                        @include text($text-s, $text-light , $text-c2-light );
-                        line-height: 19px;
-                        border: 1px solid $text-c1-dark;
-                        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-                    }
+                .register-user {
+                    @include text($text-s, $text-light , $text-c2-light );
+                    line-height: 19px;
+                    border: 1px solid $text-c1-dark;
+                    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
                 }
             }
         }
     }
+
 }
 
 .menu {
@@ -254,11 +238,9 @@ header {
 .carousel-1 {
     .carousel {
         background: $bg-c1-light;
-        position: relative;
 
         .carousel-indicators {
-            position: absolute;
-            top: 397px;
+            margin-bottom: 100px;
 
             li {
                 width: 15px;
@@ -281,60 +263,113 @@ header {
                 background-repeat: no-repeat;
                 background-size: cover;
                 height: 530px;
+                display: flex;
+                flex-wrap: wrap;
 
                 .carousel-thumb {
+                    width: 50%;
+                    flex: 0 0 50%;
+
+                    @media (max-width:720px) {
+                        width: 100%;
+                    }
+
                     img {
+
                         margin-left: 122px;
                         width: 821px;
                         height: 392px;
+
+                        @media (max-width:1200px) {
+                            margin-left: 80px;
+                            width: 700px;
+                            height: 391px;
+                        }
+
+                        @media (max-width:992px) {
+                            margin-left: 60px;
+                            width: 600px;
+                            height: 391px;
+                        }
+
+                        @media (max-width:720px) {
+                            margin-left: 60px;
+                            width: 600px;
+                            height: 391px;
+                        }
+
                     }
                 }
 
-                .text-carousel {
-                    position: absolute;
-                    top: 124px;
-                    left: 1130px;
-                    right: 59px;
-                    bottom: 355px;
-                    @include text($text-xl, $text-light , $text-c1-dark );
-                }
+                .carousel-content {
+                    margin-top: 124px;
+                    flex: 0 0 50%;
+                    width: 50%;
 
-                .text-carousel-2 {
-                    position: absolute;
-                    top: 175px;
-                    left: 1130px;
-                    right: 59px;
-                    bottom: 304px;
-                    @include text($text-sl, $text-light , $text-c1-dark );
-                }
+                    @media (max-width:720px) {
+                        width: 100%;
+                        flex: 0 0 100%;
+                        position: absolute;
+                        top: 20px;
+                        left: 350px;
+                    }
 
-                .btn-buy {
-                    position: absolute;
-                    top: 225px;
-                    left: 1130px;
-                    @include button($text-sl, $text-light , $text-c1-light , $bg-c1-yellow , 13px 35px 13px 34px, 1px solid $bg-c1-yellow , none, $bg-c1-light, $text-c1-yellow);
+                    .content-carou {
+                        padding-left: 330px;
+
+                        @media (max-width:1200px) {
+                            padding-left: 250px;
+                        }
+
+                        @media (max-width:1020px) {
+                            padding-left: 100px;
+                        }
+
+                        .text-carousel {
+                            @include text($text-xl, $text-light , $text-c1-dark );
+
+                            @media (max-width:720px) {
+                                @include text($text-base, $text-light , $text-c1-dark );
+                            }
+                        }
+
+                        .text-carousel-2 {
+                            @include text($text-sl, $text-light , $text-c1-dark );
+
+                            @media (max-width:720px) {
+                                @include text($text-s, $text-light , $text-c1-dark );
+                            }
+                        }
+
+                        .btn-buy {
+                            @include button($text-sl, $text-light , $text-c1-light , $bg-c1-yellow , 13px 35px 13px 34px, 1px solid $bg-c1-yellow , none, $bg-c1-light, $text-c1-yellow);
+
+                            @media (max-width:720px) {
+                                @include button($text-s, $text-light , $text-c1-light , $bg-c1-yellow , 5px 35px 5px 34px, 1px solid $bg-c1-yellow , none, $bg-c1-light, $text-c1-yellow);
+                            }
+                        }
+                    }
                 }
             }
         }
 
-        .carousel-control-prev {
-            position: absolute;
-            top: -100px;
-            left: -70px;
+
+
+
+    }
+
+    .carousel-control-prev {
+        margin-left: -50px;
+
+        @media (max-width:1470px) {
+            display: none;
         }
+    }
 
-        .carousel-control-next {
-            position: absolute;
-            top: -100px;
-
-            // right: -70px;
-            img {
-                position: absolute;
-                right: 25px;
-            }
+    .carousel-control-next {
+        @media (max-width:1470px) {
+            display: none;
         }
-
-
     }
 }
 
@@ -344,7 +379,7 @@ header {
     background: $bg-c2-light;
     padding-bottom: 80px;
 
-    .pdt-2 { 
+    .pdt-2 {
 
         h3 {
             font-style: normal;
@@ -356,168 +391,290 @@ header {
 
     #feature-content {
         padding-top: 89px;
-            .feature-row{
-                display: flex;
-                flex-wrap: wrap;
-                margin-left: 100px;
-                padding-right: 30px;
-                .card-product {
-                    max-width:  30%;
-                    flex: 0 0 30%;
-                    width: 334px;
-                    height: 460px;
-                    background-color: $bg-c3-light;
-                    margin-right: 40px;
-                    margin-bottom: 50px;
-                    position: relative;
-        
-                    .img-top {
-                        text-align: center;
-                        img {
-                            width: 220px;
-                            height: 220px;
-                        }
-                    }
-                    .bottom-1{
-                        margin-left: 10px;
-                        margin-top: 30px;
-                        @include text($text-base,$text-light ,$text-c1-dark );
-                        line-height: 29px;
-                    }
-                    .bottom-2{
-                        margin-left: 10px;
-                        @include text($text-sl,$text-light ,$text-c1-grey );
-                        line-height: 24px;
-                    }
-                    .btn-buy-2{
-                        display: flex;
-                        flex-wrap: wrap;
-                        position: absolute;
-                        bottom: 0;
-                        width: 100%;
-                        .btn-buy-shose{
-                            width: 50%;
-                            flex: 0 0 50%;
-                            @include button($text-base,$text-small ,$text-c1-dark ,$bg-c2-yellow ,17px 27px 18px 39px ,1px solid $bg-c2-yellow ,none , $bg-c1-light, $text-c2-yellow);
-                        }
-                        span{
-                            text-align: center;
-                            width: 50%;
-                            flex: 0 0 50%;
-                            @include text($text-base,$text-semibold ,$text-c1-dark );
-                            line-height: 35px;
-                            background-color: $bg-c1-grey;
-                            padding: 17px 40px 18px 66px;
-                        }
-                    }
-                    
 
+        .row {
+            @media (max-width:1200px) {
+                padding-left: 100px;
+            }
+
+            @media (max-width:992px) {
+                padding-left: 70px;
+            }
+
+            @media (max-width:768px) {
+                padding-left: 0px;
+            }
+
+            .col-lg-4 {
+                max-width: 30%;
+                flex: 0 0 30%;
+                width: 334px;
+                height: 460px;
+                background-color: $bg-c3-light;
+                margin-right: 38px;
+                margin-bottom: 50px;
+
+                .img-top {
+                    text-align: center;
+
+                    img {
+                        width: 220px;
+                        height: 220px;
+
+                        @media (max-width:992px) {
+                            width: 150px;
+                            height: 150px;
+                        }
+                    }
+                }
+
+                .bottom-1 {
+                    margin-left: 10px;
+                    margin-top: 30px;
+                    @include text($text-base, $text-light , $text-c1-dark );
+                    line-height: 29px;
+
+                    @media (max-width:992px) {
+                        font-size: $text-sl;
+                    }
+                }
+
+                .bottom-2 {
+                    margin-left: 10px;
+                    @include text($text-sl, $text-light , $text-c1-grey );
+                    line-height: 24px;
+
+                    @media (max-width:992px) {
+                        font-size: $text-s;
+                    }
+                }
+
+                .btn-buy-2 {
+                    display: flex;
+                    flex-wrap: wrap;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+
+                    .btn-buy-shose {
+                        width: 50%;
+                        flex: 0 0 50%;
+                        @include button($text-base, $text-small , $text-c1-dark , $bg-c2-yellow , 17px 27px 18px 39px, 1px solid $bg-c2-yellow , none, $bg-c1-light, $text-c2-yellow);
+
+                        @media (max-width:992px) {
+                            @include button($text-s, $text-small , $text-c1-dark , $bg-c2-yellow , 10px 20px 10px 20px, 1px solid $bg-c2-yellow , none, $bg-c1-light, $text-c2-yellow);
+                        }
+                    }
+
+                    span {
+                        text-align: center;
+                        width: 50%;
+                        flex: 0 0 50%;
+                        @include text($text-base, $text-semibold , $text-c1-dark );
+                        line-height: 35px;
+                        background-color: $bg-c1-grey;
+                        padding: 17px 40px 18px 66px;
+
+                        @media (max-width:992px) {
+                            @include text($text-s, $text-semibold , $text-c1-dark );
+                            line-height: 20px;
+                            padding: 10px 20px 10px 20px;
+                        }
+                    }
+                }
+
+
+            }
+
+            @media (max-width:1200px) {
+                .col-md-6 {
+                    max-width: 40%;
+                    flex: 0 0 40%;
+                    height: 490px;
+
+                    @media (max-width:992px) {
+                        height: 450px;
+                    }
                 }
             }
-        } 
-        
-    
+
+            @media (max-width:768px) {
+                .col-sm-12 {
+                    max-width: 100%;
+                    flex: 0 0 100%;
+                    height: 400px;
+                }
+            }
+        }
+    }
+
+
 }
 
 footer {
-    .footer-top{
+    .footer-top {
         background: $bg-c3-light;
         padding: 30px 0;
-        .container{
-            .row{
-                .get-footer{
-                    border-right: 2px solid rgba(222,221,220,0.5);
-                    h4{
-                        @include text($text-base,$text-semibold ,$text-c1-dark );
+
+        .container {
+            .row {
+                .get-footer {
+                    border-right: 2px solid rgba(222, 221, 220, 0.5);
+
+                    h4 {
+                        @include text($text-base, $text-semibold , $text-c1-dark );
                         padding-bottom: 5px;
                     }
-                    ul{
+
+                    ul {
                         list-style: none;
-                        li{
-                            a{
-                                @include text-a($text-s,$text-light ,$text-c1-dark , $text-c1-red);
+
+                        li {
+                            a {
+                                @include text-a($text-s, $text-light , $text-c1-dark , $text-c1-red);
                                 text-decoration: none;
                             }
                         }
                     }
                 }
-                .order-footer{
-                    border-right: 2px solid rgba(222,221,220,0.5);
-                    h4{
-                        @include text($text-base,$text-semibold ,$text-c1-dark );
+
+                .order-footer {
+                    border-right: 2px solid rgba(222, 221, 220, 0.5);
+
+                    h4 {
+                        @include text($text-base, $text-semibold , $text-c1-dark );
                         padding-bottom: 5px;
                     }
-                    ul{
+
+                    ul {
                         list-style: none;
-                        li{
-                            a{
-                                @include text-a($text-s,$text-light ,$text-c1-dark , $text-c1-red);
+
+                        li {
+                            a {
+                                @include text-a($text-s, $text-light , $text-c1-dark , $text-c1-red);
                                 text-decoration: none;
                             }
                         }
                     }
                 }
-                .register-footer{
-                    h4{
-                        @include text($text-base,$text-semibold ,$text-c1-dark );
+
+                .register-footer {
+                    h4 {
+                        @include text($text-base, $text-semibold , $text-c1-dark );
                         padding-bottom: 5px;
                     }
-                    p{
-                        @include text($text-s,$text-light ,$text-c1-dark );
+
+                    p {
+                        @include text($text-s, $text-light , $text-c1-dark );
                     }
-                    a{
-                        @include text-a($text-s,$text-light ,$text-c1-red , $text-c1-blue);
+
+                    a {
+                        @include text-a($text-s, $text-light , $text-c1-red , $text-c1-blue);
                         text-decoration: none;
+                    }
+                }
+
+                @media (max-width:768px) {
+                    .col-4 {
+                        max-width: 100%;
+                        flex: 0 0 100%;
+                        text-align: center;
+                    }
+
+                    .get-footer {
+                        border-right: none;
+                        border-bottom: 2px solid rgba(222, 221, 220, 0.5);
+                        margin-bottom: 10px;
+
+                    }
+
+                    .order-footer {
+                        border-right: none;
+                        border-bottom: 2px solid rgba(222, 221, 220, 0.5);
+                        margin-bottom: 10px;
                     }
                 }
 
             }
         }
     }
-    .footer-bottom{
+
+    .footer-bottom {
         background: $bg-c1-grey;
         padding: 30px 0;
-        .container{
-            .row{
-                .sign-footer{
+
+        .container {
+            .row {
+                .sign-footer {
                     border-right: 2px solid $bg-c4-grey;
-                    h4{
-                        @include text($text-base,$text-semibold ,$text-c1-dark );
+
+                    h4 {
+                        @include text($text-base, $text-semibold , $text-c1-dark );
                         padding-bottom: 5px;
                     }
-                    p{
-                        @include text($text-s,$text-light ,$text-c1-dark );
+
+                    p {
+                        @include text($text-s, $text-light , $text-c1-dark );
                     }
-                    a{
-                        @include text-a($text-s,$text-light ,$text-c1-red , $text-c1-blue);
+
+                    a {
+                        @include text-a($text-s, $text-light , $text-c1-red , $text-c1-blue);
                         text-decoration: none;
                     }
                 }
-                .gift-footer{
+
+                .gift-footer {
                     border-right: 2px solid $bg-c4-grey;
-                    h4{ 
-                        @include text($text-base,$text-semibold ,$text-c1-dark );
+
+                    h4 {
+                        @include text($text-base, $text-semibold , $text-c1-dark );
                         padding-bottom: 5px;
                     }
-                    p{
-                        @include text($text-s,$text-light ,$text-c1-dark );
+
+                    p {
+                        @include text($text-s, $text-light , $text-c1-dark );
                     }
-                    a{
-                        @include text-a($text-s,$text-light ,$text-c1-red , $text-c1-blue);
+
+                    a {
+                        @include text-a($text-s, $text-light , $text-c1-red , $text-c1-blue);
                         text-decoration: none;
                     }
                 }
-                .store-footer{
-                    h4{
-                        @include text($text-base,$text-semibold ,$text-c1-dark );
+
+                .store-footer {
+                    h4 {
+                        @include text($text-base, $text-semibold , $text-c1-dark );
                         padding-bottom: 5px;
                     }
-                    p{
-                        @include text($text-s,$text-light ,$text-c1-dark );
+
+                    p {
+                        @include text($text-s, $text-light , $text-c1-dark );
                     }
-                    a{
-                        @include text-a($text-s,$text-light ,$text-c1-red , $text-c1-blue);
+
+                    a {
+                        @include text-a($text-s, $text-light , $text-c1-red , $text-c1-blue);
                         text-decoration: none;
+                    }
+                }
+
+                @media (max-width:768px) {
+                    .col-4 {
+                        max-width: 100%;
+                        flex: 0 0 100%;
+                        text-align: center;
+                    }
+
+                    .sign-footer {
+                        border-right: none;
+                        border-bottom: 2px solid $bg-c4-grey;
+                        margin-bottom: 20px;
+                    }
+
+                    .gift-footer {
+                        border-right: none;
+                        border-bottom: 2px solid $bg-c4-grey;
+                        margin-bottom: 20px;
                     }
                 }
             }
@@ -525,7 +682,7 @@ footer {
     }
 }
 
-.backToTop{
+.backToTop {
     width: 50px;
     height: 50px;
     text-align: center;
@@ -537,14 +694,17 @@ footer {
     color: $text-c1-dark;
     visibility: hidden;
     opacity: 0;
-    &:hover{
+
+    &:hover {
         color: $text-c1-red;
     }
-    i{
+
+    i {
         font-size: $text-xl;
     }
 }
-.cd-top--is-visible{
+
+.cd-top--is-visible {
     visibility: visible;
     opacity: 1;
 }
@@ -557,89 +717,74 @@ header {
         height: 50px;
         position: relative;
         border: 1px solid $text-c1-dark;
-        // width: 1280px;
+        display: flex;
+        justify-content: space-between;
 
-        .container {
-            .logo {
-                .logo-cyber {
+        .logo {
+            .logo-cyber {
+                img {
+                    width: 116px;
+                    height: 32px;
+                    margin-left: 24px;
+                    margin-top: 10px;
+                }
+            }
+        }
+
+        .service {
+            display: flex;
+            margin-top: 10px;
+
+            .buy {
+                display: flex;
+
+
+                .logo-buy {
                     img {
-                        position: absolute;
-                        width: 116px;
-                        height: 32px;
-                        left: 24px;
-                        top: 10px;
+                        width: 31px;
+                        height: 31px;
+                        top: 3px;
+
                     }
+                }
+
+            }
+
+            .test {
+
+                .txt {
+                    font-style: normal;
+                    line-height: 36px;
+                    @include text($text-x, $text-light , $text-c1-light );
                 }
             }
 
-            .service {
-                display: flex;
+            .login {
+                width: 91px;
+                height: 32px;
 
-                .buy {
-                    display: flex;
-                    position: absolute;
-                    left: 1227px;
-                    right: 53.03%;
-                    top: 8.33%;
-                    bottom: 5.56%;
-
-                    .logo-buy {
-                        img {
-                            width: 31px;
-                            height: 31px;
-                            top: 3px;
-
-                        }
-                    }
-
+                .login-user {
+                    @include text($text-s, $text-light, $text-c2-light);
+                    line-height: 19px;
+                    border: 1px solid $text-c1-dark;
+                    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
                 }
+            }
 
-                .test {
-                    position: absolute;
-                    left: 1258px;
-                    right: 0;
-                    top: 0;
-                    bottom: 0;
+            .register {
+                width: 90px;
+                height: 32px;
 
-                    .txt {
-                        font-style: normal;
-                        line-height: 36px;
-                        @include text($text-x, $text-light , $text-c1-light );
-                    }
-                }
-
-                .login {
-                    position: absolute;
-                    width: 91px;
-                    height: 32px;
-                    top: 10px;
-                    left: 1303px;
-
-                    .login-user {
-                        @include text($text-s, $text-light, $text-c2-light);
-                        line-height: 19px;
-                        border: 1px solid $text-c1-dark;
-                        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-                    }
-                }
-
-                .register {
-                    position: absolute;
-                    width: 90px;
-                    height: 32px;
-                    top: 10px;
-                    left: 1370px;
-
-                    .register-user {
-                        @include text($text-s, $text-light , $text-c2-light );
-                        line-height: 19px;
-                        border: 1px solid $text-c1-dark;
-                        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-                    }
+                .register-user {
+                    @include text($text-s, $text-light , $text-c2-light );
+                    line-height: 19px;
+                    border: 1px solid $text-c1-dark;
+                    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
                 }
             }
         }
     }
+
 }
 
 .menu-register {
@@ -725,7 +870,6 @@ header {
 
 .register-content {
     position: relative;
-    height: 538px;
     background: $bg-c2-light;
 
     .top {
@@ -739,380 +883,397 @@ header {
         }
     }
 
-    .bottom {
-        #email {
-            position: absolute;
-            top: 130px;
-            left: 270px;
-            bottom: 362px;
-            border: none;
-            @include text($text-x, $text-regular , $text-c1-dark );
-            line-height: 36px;
-            width: 30%;
-        }
+    .container {
+        .row {
+            .register-left {
+                .email {
+                    display: flex;
+                    border-bottom: 5px solid $text-c1-violet;
+                    margin-bottom: 10px;
 
-        .star-1 {
-            position: absolute;
-            top: 149px;
-            bottom: 355px;
-            left: 738px;
-            right: 469px;
-            @include text($text-sl, $text-regular , $text-c1-red );
-            line-height: 24px;
-        }
+                    #email {
+                        border: none;
+                        @include text($text-x, $text-regular , $text-c1-dark );
+                        line-height: 36px;
+                        width: 90%;
+                    }
 
-        .line-1 {
-            position: absolute;
-            width: 482px;
-            top: 191px;
-            bottom: 347px;
-            left: 270px;
-            border-bottom: 5px solid $text-c1-violet;
-        }
+                    .star-1 {
+                        @include text($text-sl, $text-regular , $text-c1-red );
+                        line-height: 24px;
+                        padding-top: 15px;
+                        width: 10%;
+                        text-align: center;
+                    }
+                }
 
-        #name {
-            position: absolute;
-            top: 130px;
-            bottom: 347px;
-            left: 851px;
-            border: none;
-            @include text($text-x, $text-regular , $text-c1-dark );
-            line-height: 36px;
-            width: 30%;
-        }
+                .password {
+                    display: flex;
+                    border-bottom: 5px solid $text-c1-violet;
+                    margin-bottom: 10px;
 
-        .star-4 {
-            position: absolute;
-            top: 149px;
-            left: 1309px;
-            right: 112px;
-            bottom: 355px;
-            @include text($text-sl, $text-regular , $text-c1-red );
-            line-height: 24px;
-        }
+                    #password {
+                        border: none;
+                        @include text($text-x, $text-regular , $text-c1-dark );
+                        line-height: 36px;
+                        width: 90%;
 
-        .line-4 {
-            position: absolute;
-            width: 482px;
-            top: 191px;
-            bottom: 347px;
-            left: 851px;
-            border-bottom: 5px solid $text-c1-violet;
-        }
+                    }
 
-        #password {
-            position: absolute;
-            left: 270px;
-            right: 814px;
-            top: 208px;
-            bottom: 284px;
-            border: none;
-            @include text($text-x, $text-regular , $text-c1-dark );
-            line-height: 36px;
-            width: 30%;
-        }
+                    .star-2 {
+                        @include text($text-sl, $text-regular , $text-c1-red );
+                        line-height: 24px;
+                        padding-top: 15px;
+                        width: 10%;
+                        text-align: center;
+                    }
+                }
 
-        .star-2 {
-            position: absolute;
-            top: 227px;
-            left: 738px;
-            right: 469px;
-            bottom: 277px;
-            @include text($text-sl, $text-regular , $text-c1-red );
-            line-height: 24px;
-        }
+                .password-comfirm {
+                    display: flex;
+                    border-bottom: 5px solid $text-c1-violet;
+                    margin-bottom: 10px;
 
-        .line-2 {
-            position: absolute;
-            width: 482px;
-            top: 269px;
-            bottom: 269px;
-            left: 270px;
-            border-bottom: 5px solid $text-c1-violet;
-        }
+                    #password-comfirm {
+                        border: none;
+                        @include text($text-x, $text-regular , $text-c1-dark );
+                        line-height: 36px;
+                        width: 90%;
+                    }
 
-        #phone {
-            position: absolute;
-            left: 846px;
-            right: 814px;
-            top: 208px;
-            bottom: 284px;
-            border: none;
-            @include text($text-x, $text-regular , $text-c1-dark );
-            line-height: 36px;
-            width: 30%;
-        }
-
-        .star-5 {
-            position: absolute;
-            top: 227px;
-            left: 1309px;
-            right: 107px;
-            bottom: 277px;
-            @include text($text-sl, $text-regular , $text-c1-red );
-            line-height: 24px;
-        }
-
-        .line-5 {
-            position: absolute;
-            width: 482px;
-            top: 269px;
-            bottom: 269px;
-            left: 846px;
-            border-bottom: 5px solid $text-c1-violet;
-        }
-
-        #password-comfirm {
-            position: absolute;
-            left: 270px;
-            right: 814px;
-            top: 292px;
-            bottom: 200px;
-            border: none;
-            @include text($text-x, $text-regular , $text-c1-dark );
-            line-height: 36px;
-            width: 30%;
-        }
-
-        .star-3 {
-            position: absolute;
-            top: 311px;
-            left: 728px;
-            right: 469px;
-            bottom: 193px;
-            @include text($text-sl, $text-regular , $text-c1-red );
-            line-height: 24px;
-        }
-
-        .line-3 {
-            position: absolute;
-            width: 482px;
-            top: 353px;
-            bottom: 185px;
-            left: 270px;
-            border-bottom: 5px solid $text-c1-violet;
-        }
-
-        .gender-1 {
-            position: absolute;
-            width: 105px;
-            height: 36px;
-            left: 846px;
-            top: 327px;
-            @include text($text-x, $text-regular , $text-c1-dark );
-            line-height: 36px;
-        }
-
-        .male {
-            position: absolute;
-            top: 323px;
-            left: 1058px;
-            @include text($text-x, $text-regular , $text-c1-dark );
-
-            &:hover input~.checkmark {
-                background-color: $bg-c3-grey;
-            }
-
-            & input:checked~.checkmark {
-                background-color: $bg-c2-grey;
-            }
-
-            & input:checked~.checkmark::after {
-                display: block;
-            }
-
-            & .checkmark::after {
-                width: 39.25px;
-                height: 30px;
-                border-radius: 50%;
-                top: 10px;
-                left: 13px;
-                background-color: $bg-c1-violet;
-            }
-
-            .checkmark {
-                position: absolute;
-                border-radius: 50%;
-                background-color: $bg-c2-grey;
-                height: 50px;
-                width: 65.42px;
-                right: 100px;
-
-                &::after {
-                    content: "";
-                    position: absolute;
-                    display: none;
+                    .star-3 {
+                        @include text($text-sl, $text-regular , $text-c1-red );
+                        line-height: 24px;
+                        padding-top: 15px;
+                        width: 10%;
+                        text-align: center;
+                    }
                 }
             }
 
-            #male {
-                opacity: 0;
+            .register-right {
+                .name {
+                    display: flex;
+                    border-bottom: 5px solid $text-c1-violet;
+                    margin-bottom: 10px;
 
-            }
-        }
+                    #name {
+                        border: none;
+                        @include text($text-x, $text-regular , $text-c1-dark );
+                        line-height: 36px;
+                        width: 90%;
+                    }
 
-        .female {
-            position: absolute;
-            top: 323px;
-            left: 1252px;
-            @include text($text-x, $text-regular , $text-c1-dark );
+                    .star-4 {
+                        @include text($text-sl, $text-regular , $text-c1-red );
+                        line-height: 24px;
+                        padding-top: 15px;
+                        width: 10%;
+                        text-align: center;
+                    }
+                }
 
-            &:hover input~.checkmark {
-                background-color: $bg-c3-grey;
-            }
+                .phone {
+                    display: flex;
+                    border-bottom: 5px solid $text-c1-violet;
+                    margin-bottom: 10px;
 
-            & input:checked~.checkmark {
-                background-color: $bg-c2-grey;
-            }
+                    #phone {
+                        border: none;
+                        @include text($text-x, $text-regular , $text-c1-dark );
+                        line-height: 36px;
+                        width: 90%;
+                    }
 
-            & input:checked~.checkmark::after {
-                display: block;
-            }
+                    .star-5 {
+                        @include text($text-sl, $text-regular , $text-c1-red );
+                        line-height: 24px;
+                        padding-top: 15px;
+                        width: 10%;
+                        text-align: center;
+                    }
+                }
 
-            & .checkmark::after {
-                width: 39.25px;
-                height: 30px;
-                border-radius: 50%;
-                top: 10px;
-                left: 13px;
-                background-color: $bg-c1-violet;
-            }
+                .gen {
+                    padding: 25px 0;
+                    .gender-1 {
+                        @include text($text-x, $text-regular , $text-c1-dark );
+                        line-height: 36px;
+                    }
 
-            .checkmark {
-                position: absolute;
-                border-radius: 50%;
-                background-color: $bg-c2-grey;
-                height: 50px;
-                width: 65.42px;
-                right: 140px;
+                    .male {
+                        @include text($text-x, $text-regular , $text-c1-dark );
+                        padding-left: 80px;
+                        position: relative;
+                        @media (max-width:1200px){
+                            padding-left: 80px;
+                        }
+                        &:hover input~.checkmark {
+                            background-color: $bg-c3-grey;
+                        }
+            
+                        & input:checked~.checkmark {
+                            background-color: $bg-c2-grey;
+                        }
+            
+                        & input:checked~.checkmark::after {
+                            display: block;
+                        }
+            
+                        & .checkmark::after {
+                            position: absolute;
+                            width: 39.25px;
+                            height: 30px;
+                            border-radius: 50%;
+                            top: 10px;
+                            left: 13px;
+                            background-color: $bg-c1-violet;
+                        }
+            
+                        .checkmark {
+                            position: absolute;
+                            border-radius: 50%;
+                            background-color: $bg-c2-grey;
+                            height: 50px;
+                            width: 65.42px;
+                            right: 100px;
+            
+                            &::after {
+                                content: "";
+                                position: absolute;
+                                display: none;
+                            }
+                        }
+            
+                        #male {
+                            opacity: 0;
+            
+                        }
 
-                &::after {
-                    content: "";
-                    position: absolute;
-                    display: none;
+                    }
+
+                    .female {
+                        @include text($text-x, $text-regular , $text-c1-dark );
+                        padding-left: 80px;
+                        position: relative;
+                        &:hover input~.checkmark {
+                            background-color: $bg-c3-grey;
+                        }
+            
+                        & input:checked~.checkmark {
+                            background-color: $bg-c2-grey;
+                        }
+            
+                        & input:checked~.checkmark::after {
+                            display: block;
+                        }
+            
+                        & .checkmark::after {
+                            position: absolute;
+                            width: 39.25px;
+                            height: 30px;
+                            border-radius: 50%;
+                            top: 10px;
+                            left: 13px;
+                            background-color: $bg-c1-violet;
+                        }
+            
+                        .checkmark {
+                            position: absolute;
+                            border-radius: 50%;
+                            background-color: $bg-c2-grey;
+                            height: 50px;
+                            width: 65.42px;
+                            right: 140px;
+            
+                            &::after {
+                                content: "";
+                                position: absolute;
+                                display: none;
+                            }
+                        }
+            
+                        #female {
+                            opacity: 0;
+            
+                        }
+
+                    }
+                }
+                .btn-submit-all{
+                    padding-top: 50px;
+                    .btn-submit-1 {
+                        @include button($text-x, $text-regular , $text-c3-light , $bg-c1-violet , 6px 98.94px 12px 87.3px, none, none, $bg-c1-violet, $text-c3-light);
+                    }
                 }
             }
-
-            #female {
-                opacity: 0;
-
-            }
-        }
-    }
-
-    .btn-submit {
-        position: absolute;
-        top: 454px;
-        left: 851px;
-        right: 386.94px;
-        bottom: 52px;
-
-        .btn-submit-1 {
-            @include button($text-x, $text-regular , $text-c3-light , $bg-c1-violet , 6px 98.94px 12px 87.3px, none, none, $bg-c1-violet, $text-c3-light);
         }
     }
 }
 
 footer {
     padding-top: 30px;
-    .footer-top-1{
+
+    .footer-top-1 {
         background: $bg-c3-light;
         padding: 30px 0;
-        .container{
-            .row{
-                .get-footer{
-                    border-right: 2px solid rgba(222,221,220,0.5);
-                    h4{
-                        @include text($text-base,$text-semibold ,$text-c1-dark );
+
+        .container {
+            .row {
+                .get-footer {
+                    border-right: 2px solid rgba(222, 221, 220, 0.5);
+
+                    h4 {
+                        @include text($text-base, $text-semibold , $text-c1-dark );
                         padding-bottom: 5px;
                     }
-                    ul{
+
+                    ul {
                         list-style: none;
-                        li{
-                            a{
-                                @include text-a($text-s,$text-light ,$text-c1-dark , $text-c1-red);
+
+                        li {
+                            a {
+                                @include text-a($text-s, $text-light , $text-c1-dark , $text-c1-red);
                                 text-decoration: none;
                             }
                         }
                     }
                 }
-                .order-footer{
-                    border-right: 2px solid rgba(222,221,220,0.5);
-                    h4{
-                        @include text($text-base,$text-semibold ,$text-c1-dark );
+
+                .order-footer {
+                    border-right: 2px solid rgba(222, 221, 220, 0.5);
+
+                    h4 {
+                        @include text($text-base, $text-semibold , $text-c1-dark );
                         padding-bottom: 5px;
                     }
-                    ul{
+
+                    ul {
                         list-style: none;
-                        li{
-                            a{
-                                @include text-a($text-s,$text-light ,$text-c1-dark , $text-c1-red);
+
+                        li {
+                            a {
+                                @include text-a($text-s, $text-light , $text-c1-dark , $text-c1-red);
                                 text-decoration: none;
                             }
                         }
                     }
                 }
-                .register-footer{
-                    h4{
-                        @include text($text-base,$text-semibold ,$text-c1-dark );
+
+                .register-footer {
+                    h4 {
+                        @include text($text-base, $text-semibold , $text-c1-dark );
                         padding-bottom: 5px;
                     }
-                    p{
-                        @include text($text-s,$text-light ,$text-c1-dark );
+
+                    p {
+                        @include text($text-s, $text-light , $text-c1-dark );
                     }
-                    a{
-                        @include text-a($text-s,$text-light ,$text-c1-red , $text-c1-blue);
+
+                    a {
+                        @include text-a($text-s, $text-light , $text-c1-red , $text-c1-blue);
                         text-decoration: none;
+                    }
+                }
+                @media (max-width:768px) {
+                    .col-4 {
+                        max-width: 100%;
+                        flex: 0 0 100%;
+                        text-align: center;
+                    }
+
+                    .get-footer {
+                        border-right: none;
+                        border-bottom: 2px solid rgba(222, 221, 220, 0.5);
+                        margin-bottom: 10px;
+
+                    }
+
+                    .order-footer {
+                        border-right: none;
+                        border-bottom: 2px solid rgba(222, 221, 220, 0.5);
+                        margin-bottom: 10px;
                     }
                 }
 
             }
         }
     }
-    .footer-bottom-1{
+
+    .footer-bottom-1 {
         background: $bg-c1-grey;
         padding: 30px 0;
-        .container{
-            .row{
-                .sign-footer{
+
+        .container {
+            .row {
+                .sign-footer {
                     border-right: 2px solid $bg-c4-grey;
-                    h4{
-                        @include text($text-base,$text-semibold ,$text-c1-dark );
+
+                    h4 {
+                        @include text($text-base, $text-semibold , $text-c1-dark );
                         padding-bottom: 5px;
                     }
-                    p{
-                        @include text($text-s,$text-light ,$text-c1-dark );
+
+                    p {
+                        @include text($text-s, $text-light , $text-c1-dark );
                     }
-                    a{
-                        @include text-a($text-s,$text-light ,$text-c1-red , $text-c1-blue);
+
+                    a {
+                        @include text-a($text-s, $text-light , $text-c1-red , $text-c1-blue);
                         text-decoration: none;
                     }
                 }
-                .gift-footer{
+
+                .gift-footer {
                     border-right: 2px solid $bg-c4-grey;
-                    h4{ 
-                        @include text($text-base,$text-semibold ,$text-c1-dark );
+
+                    h4 {
+                        @include text($text-base, $text-semibold , $text-c1-dark );
                         padding-bottom: 5px;
                     }
-                    p{
-                        @include text($text-s,$text-light ,$text-c1-dark );
+
+                    p {
+                        @include text($text-s, $text-light , $text-c1-dark );
                     }
-                    a{
-                        @include text-a($text-s,$text-light ,$text-c1-red , $text-c1-blue);
+
+                    a {
+                        @include text-a($text-s, $text-light , $text-c1-red , $text-c1-blue);
                         text-decoration: none;
                     }
                 }
-                .store-footer{
-                    h4{
-                        @include text($text-base,$text-semibold ,$text-c1-dark );
+
+                .store-footer {
+                    h4 {
+                        @include text($text-base, $text-semibold , $text-c1-dark );
                         padding-bottom: 5px;
                     }
-                    p{
-                        @include text($text-s,$text-light ,$text-c1-dark );
+
+                    p {
+                        @include text($text-s, $text-light , $text-c1-dark );
                     }
-                    a{
-                        @include text-a($text-s,$text-light ,$text-c1-red , $text-c1-blue);
+
+                    a {
+                        @include text-a($text-s, $text-light , $text-c1-red , $text-c1-blue);
                         text-decoration: none;
+                    }
+                }
+                @media (max-width:768px) {
+                    .col-4 {
+                        max-width: 100%;
+                        flex: 0 0 100%;
+                        text-align: center;
+                    }
+
+                    .sign-footer {
+                        border-right: none;
+                        border-bottom: 2px solid $bg-c4-grey;
+                        margin-bottom: 20px;
+                    }
+
+                    .gift-footer {
+                        border-right: none;
+                        border-bottom: 2px solid $bg-c4-grey;
+                        margin-bottom: 20px;
                     }
                 }
             }

@@ -21,7 +21,7 @@ function renderProduct(arrProduct) {
     for (var i = 0; i < arrProduct.length; i++) {
         var shose = arrProduct[i];
         html += `
-        <div class='card-product'>
+        <div class='col-lg-4 col-md-6 col-sm-12'>
         <div class='card-body'>
         <div class='img-top'>
             <img src="${shose.image}" alt=""/>
