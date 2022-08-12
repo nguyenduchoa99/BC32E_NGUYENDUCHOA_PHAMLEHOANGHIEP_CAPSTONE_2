@@ -29,14 +29,19 @@ $text-c1-light: #FFFFFF;
 $text-c2-light: #F7F7F7;
 $text-c3-light: #FFFCFC;
 $text-c1-dark: #000000;
+$text-c2-dark: #1E1D1D;
 $text-c1-yellow: #F8B653;
-$text-c2-yellow: #E1B067;
+$text-c2-yellow:#E1B067;
 $text-c1-grey: #CBC9C9;
 $text-c1-red: #F50E0E;
 $text-c1-violet: #AE18E2;
 $text-c1-blue: #0000FF;
+$text-c1-green: #1ED90E;
 
-
+.container{
+    max-width: 1280px;
+    margin: 0 auto;
+}
 
 
 @mixin text($fs: $text-x, $fw: $text-regular, $c: $text-c1-dark) {
@@ -44,7 +49,12 @@ $text-c1-blue: #0000FF;
     font-weight: $fw;
     color: $c;
 }
-
+@mixin textlink($fs, $fw, $color ) {
+    font-size: $fs;
+    font-weight: $fw;
+    color: $color;
+    text-decoration: none;
+}
 @mixin text-a($fs: $text-x, $fw: $text-regular, $c: $text-c1-dark, $c-hover) {
     font-size: $fs;
     font-weight: $fw;
@@ -69,7 +79,34 @@ $text-c1-blue: #0000FF;
         color: $c-hover;
     }
 }
+$breakpoints: (
+    xl:1279px,
+    lg:972px,
+    md:768px,
+    sm:576px,
+);
 
+@mixin reponsive($screen) {
+    $value: map-get($map: $breakpoints, $key: $screen);
+
+    @media (max-width:$value) {
+        @content;
+    }
+}
+@mixin position($position, $width, $hight, $top:auto, $right:auto, $bottom:auto, $left:auto) {
+    position: $position;
+    width: $width;
+    height: $hight;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+@mixin  positiondefault() {
+    position: static;
+    width: auto;
+    height: auto;
+}
 * {
     font-family: 'Inter', sans-serif;
     margin: 0;
@@ -461,6 +498,7 @@ header {
                         width: 50%;
                         flex: 0 0 50%;
                         @include button($text-base, $text-small , $text-c1-dark , $bg-c2-yellow , 17px 27px 18px 39px, 1px solid $bg-c2-yellow , none, $bg-c1-light, $text-c2-yellow);
+                        text-decoration: none;
 
                         @media (max-width:1200px) {
                             @include button($text-s, $text-small , $text-c1-dark , $bg-c2-yellow , 10px 20px 10px 20px, 1px solid $bg-c2-yellow , none, $bg-c1-light, $text-c2-yellow);
@@ -1285,6 +1323,575 @@ footer {
                         border-right: none;
                         border-bottom: 2px solid $bg-c4-grey;
                         margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Detail.html
+header {
+    background-color: $bg-c1-dark;
+
+    .container {
+        @include position(relative, auto, 50px);
+
+        .logo {
+            a {
+                img {
+                    @include position(absolute, 116px, 32px, 10px, auto, auto, 24px)
+                }
+            }
+        }
+
+        .content {
+            .component1 {
+                @include position(absolute, 66px, 36px, 6px, auto, auto, 1027px);
+                cursor: pointer;
+                img {
+                    @include position(absolute, 31px, 31px, 8.33%, 53.03%, 5.56%, 0)
+                }
+
+                span {
+                    @include position(absolute, auto, auto, 0, 0, 0, 46.97%);
+                    @include text($text-x, $text-light, $text-c1-light)
+                }
+            }
+
+            a {
+                @include textlink($text-s, $text-light, $text-c1-light);
+                @include position(absolute, 91px, 32px, 15px, auto, auto, auto);
+                text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            }
+
+            .login {
+                left: 1103px;
+            }
+
+            .register {
+                left: 1170px;
+            }
+        }
+    }
+
+}
+
+@include reponsive(xl) {
+    header {
+        .container {
+            padding: 0 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .logo {
+                a {
+                    img {
+                        @include positiondefault;
+                    }
+                }
+            }
+
+            .content {
+                display: flex;
+                align-items: center;
+
+                .component1 {
+                    @include positiondefault;
+                    display: flex;
+                    align-items: center;
+
+                    img {
+                        @include positiondefault;
+                    }
+
+                    span {
+                        @include positiondefault;
+                    }
+                }
+
+                a {
+                    @include positiondefault;
+                    margin-left: 20px;
+                }
+            }
+        }
+    }
+}
+
+@include reponsive(sm) {
+    header {
+        .container {
+            .content {
+                .component1 {
+                    margin-left: 10px;
+                    img {
+                        width: 20px;
+                    }
+
+                    span {
+                        @include positiondefault;
+                        font-size: $text-s
+                    }
+                }
+
+                a {
+                    margin-left: 10px;
+                    font-size: $text-s;
+                }
+            }
+        }
+    }
+}
+
+
+.menu {
+    .container {
+        @include position(relative, auto, 50px);
+
+        a {
+            @include textlink($text-sl, $text-light, $text-c1-dark);
+            @include position(absolute, auto, 24px, 16px, auto, auto, auto);
+        }
+
+        .home {
+            width: 56px;
+            left: 25px;
+            font-weight: $text-regular;
+
+        }
+
+        .men {
+            width: 41px;
+            left: 105px;
+            opacity: 0.7;
+        }
+
+        .woman {
+            width: 70px;
+            left: 183px;
+            opacity: 0.7;
+        }
+
+        .kid {
+            width: 31px;
+            left: 292px;
+        }
+
+        .sport {
+            width: 52px;
+            left: 363px;
+        }
+
+        .active {
+            @include position(absolute, 60px, 0, 50px, auto, auto, 24px);
+            border: 1px solid $bg-c1-dark;
+        }
+    }
+}
+
+@include reponsive(xl) {
+    .menu {
+        .container {
+            padding: 0 15px;
+            display: flex;
+            align-items: center;
+
+            a {
+                @include positiondefault;
+                margin-right: 30px
+            }
+
+            .active {
+                left: 15px;
+            }
+        }
+    }
+}
+
+@include reponsive(sm) {
+    .menu {
+        .container {
+            a {
+                margin-right: 10px;
+                font-size: $text-s;
+            }
+
+            .active {
+                width: 40px;
+            }
+        }
+    }
+}
+.detail {
+    .container {
+        @include position(relative, auto, 530px);
+
+        .row-1 {
+            .col-left {
+                .img {
+                    @include position(absolute, 334px, 355px, 58px, auto, auto, 65px);
+                    background-color: $bg-c3-light;
+
+                    img {
+                        @include position(absolute, 220px, 220px, 60px, auto, auto, 57px);
+                    }
+                }
+            }
+
+            .col-right {
+                position: absolute;
+                h1 {
+                    @include position(absolute, 503px, 36px, 67px, auto, auto, 527px);
+                    @include text($text-x, $text-light, $text-c1-dark)
+                }
+
+                p {
+                    @include position(absolute, 503px, 90px, 112px, auto, auto, 527px);
+                    @include text($text-s,$text-regular, $text-c1-dark)
+                }
+
+                h3 {
+                    @include position(absolute, 162px, 58px, 210px, auto, auto, 527px);
+                    @include text($text-base, $text-regular, $text-c1-green)
+                }
+
+                .button-size {
+                    button {
+                        @include text($text-base, $text-semibold, $text-c2-dark);
+                        background-color: $text-c1-grey;
+                         @include position(relative, 50px, 50px, 250px, 0, 0, 500px);
+                        cursor: pointer;
+                        margin-left: 25px;
+                    }
+                    @for $i from 0 to 7 {
+                        .size#{($i+1)} {
+                            left: 526px + 71px*($i);
+                        }
+                    }
+                }
+                h4 {
+                    @include position(absolute, 113px, 47px, 317px, auto, auto, 527px);
+                    @include text($text-x, $text-semibold, $text-c1-red)
+                }
+
+                .button-amount {
+                    button {
+                        @include text($text-x,$text-regular , $text-c3-light);
+                        @include position(absolute, 50px, 50px, 370px, auto, auto, auto);
+                        background: linear-gradient(180deg, #6181F3 0%, #7C97F5 99.48%);
+                        border: none;
+                        cursor: pointer;
+                    }
+
+                    .button-plus {
+                        left: 527px;
+                    }
+
+                    .button-minus {
+                        left: 636px;
+                    }
+
+                    span {
+                        @include text($text-x,$text-regular , $text-c1-dark);
+                        @include position(absolute, 14px, 36px, 377px, auto, auto, 597px);
+                    }
+                }
+
+                .button-add {
+                    button {
+                        @include text($text-base, $text-regular, $text-c3-light);
+                        @include position(absolute, 175px, 64px, 427px, auto, auto, 527px);
+                        background: linear-gradient(270deg, rgba(62, 32, 248, 0.9) 5.14%, #D017EE 89.71%);
+                        border: none;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include reponsive(xl) {
+    .detail {
+        .container {
+            @include reponsive(sm) {
+                height: auto;
+            }
+
+            .row-1 {
+                height: 100%;
+                display: flex;
+                padding: 30px 15px;
+                align-items: center;
+                flex-wrap: wrap;
+
+                .col-left {
+                    width: 434px;
+                    padding: 0 50px;
+
+                    @include reponsive(lg) {
+                        width: 100%;
+                    }
+
+                    @include reponsive(md) {
+                        padding: 0 !important;
+                    }
+
+                    .img {
+                        position: static;
+                        padding-top: 50px;
+
+                        @include reponsive(lg) {
+                            width: auto;
+                            height: auto;
+                            padding: 10px 0;
+                        }
+
+                        img {
+                            position: static;
+                            display: block;
+                            margin: auto;
+                        }
+                    }
+                }
+
+                .col-right {
+                    flex: 1;
+                    padding: 0 50px;
+
+                    @include reponsive(lg) {
+                        width: 100%;
+                    }
+
+                    @include reponsive(md) {
+                        padding: 0 !important;
+                    }
+
+                    h1 {
+                        @include positiondefault;
+                        font-size: $text-s;
+                    }
+
+                    p {
+                        @include positiondefault;
+                        margin-top: 10px;
+                        font-size: 10px
+                    }
+
+                    h3 {
+                        @include positiondefault;
+                        margin: 10px 0;
+                        font-size: $text-s;
+                    }
+
+                    .button-size {
+                        button {
+                            position: static;
+                            margin: 5px 10px 5px 0;
+                        }
+                    }
+
+                    h4 {
+                        @include positiondefault;
+                        margin: 10px 0;
+
+                        @include reponsive(lg) {
+                            display: inline-block;
+                        }
+                    }
+
+                    .button-amount {
+                        @include reponsive(lg) {
+                            display: inline-block;
+                            margin: 0 20px;
+                        }
+
+                        button {
+                            position: static
+                        }
+
+                        span {
+                            position: static;
+                            margin: 0 10px;
+                        }
+                    }
+
+                    .button-add {
+                        @include reponsive(lg) {
+                            display: inline-block;
+                        }
+
+                        button {
+                            position: static;
+                            margin-top: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.products {
+    padding: 30px 0;
+
+    .container {
+        padding: 0 15px;
+
+        .title {
+            padding-bottom: 30px;
+
+            h1 {
+                text-align: center;
+                @include text($text-xl, $text-regular, $text-c1-dark);
+            }
+        }
+        .content{
+            width: 100%;
+            height: 100%;
+            .row {
+                display: flex;
+                flex-wrap: wrap;
+                @media (max-width:1200px) {
+                    padding-left: 100px;
+                }
+                @media (max-width:768px) {
+                    padding-left: 0px;
+                }
+                .col {
+                    max-width:  30%;
+                    width: 334px;
+                    height: 460px;
+                    background-color: $bg-c3-light;
+                    margin-right: 40px;
+                    margin-bottom: 50px;
+                    position: relative;
+                    @media (max-width: 1200px){
+                        max-width: 40%;
+                        flex: 0 0 40%;
+                        height: 450px;
+                    }
+                    .card-body {
+                        .img-top {
+                            text-align: center;
+                            @media (max-width:992px) {
+                            text-align: center;
+                            }
+                            img {
+                                width: 220px;
+                                height: 220px;
+                                @media (max-width:992px) {
+                                    width: 150px;
+                                    height: 150px;
+                                    position: absolute;
+                                    left: 150px;
+                                }
+                            }
+                        }
+                        .bottom-1{
+                                 margin-left: 10px;
+                                @include text($text-base,$text-light ,$text-c1-dark );
+                                line-height: 29px;      
+                                 @media (max-width:992px) {
+                                font-size: $text-sl; 
+                                width: 245px;
+                                height: 57px;
+                                padding-top: 150px;
+                            }            
+                        }
+                        .bottom-2{
+                                margin-left: 10px;
+                                @include text($text-sl,$text-light ,$text-c1-grey );
+                                line-height: 24px; 
+                                @media (max-width:992px) {
+                                    font-size: $text-s;
+                                    width: 245px;
+                                    height: 72px;
+                                    padding-top: 100px
+                                }
+                        }
+                        
+                    }
+                    .btn-buy{
+                        display: flex;
+                        flex-wrap: wrap;
+                        position: absolute;
+                        bottom: 0;
+                        width: 100%;
+                        left: 0;
+                        text-align: center;
+                        .btn-buy-shose{
+                            width: 50%;
+                                flex: 0 0 50%;
+                                @include button($text-base,$text-small ,$text-c1-dark ,$bg-c2-yellow ,17px 27px 18px 39px ,1px solid $bg-c2-yellow ,none , $bg-c1-light, $text-c2-yellow);
+                                text-decoration: none;
+                                @media (max-width:1200px) {
+                                    @include button($text-s, $text-small , $text-c1-dark , $bg-c2-yellow , 10px 20px 10px 20px, 1px solid $bg-c2-yellow , none, $bg-c1-light, $text-c2-yellow);
+                                }
+                            a{
+                                color:$text-c1-dark ;
+                            }
+                        }
+                        span{
+                            text-align: center;
+                        width: 50%;
+                        flex: 0 0 50%;
+                        @include text($text-base, $text-semibold , $text-c1-dark );
+                        line-height: 35px;
+                        background-color: $bg-c1-grey;
+                        padding: 17px 40px 18px 66px;
+
+                        @media (max-width:1200px) {
+                            @include text($text-s, $text-semibold , $text-c1-dark );
+                            line-height: 20px;
+                            padding: 10px 20px 10px 20px;
+                        }
+                        }
+                    }
+                }
+            }
+}
+       
+    }
+}
+@include reponsive(lg) {
+    .products {
+        .container {
+            .title{
+                h1{
+                    font-size: $text-x;
+                }
+            }
+            .row{
+                .col{
+                    .card-body{
+                        width: 50%;
+                        .img-top{
+                            img{
+                                left: 50%;
+                                transform: translateX(-50%);
+                            }
+                        }
+                        .bottom-1{
+                            width: 50%;
+                        }
+                        .bottom-2 {
+                            width: 50%;
+                            display: inline-block;
+                            left: auto;
+                            right: 0;
+                        }
+                    }
+                    .btn-buy{
+                        .btn-buy-shose{
+                            font-size: 18px;
+
+                        }
+                        span{
+                            font-size: 18px;
+
+                        }
                     }
                 }
             }
