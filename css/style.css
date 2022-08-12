@@ -1465,6 +1465,32 @@ header .container .content .register {
   bottom: auto;
   left: 57px;
 }
+@media (max-width: 992px) {
+  .detail .container .row-1 .col-left .img img {
+    width: 200px;
+    height: 250px;
+    padding: 0px 20px 55px 0px;
+  }
+}
+@media (max-width: 992px) and (max-width: 768px) {
+  .detail .container .row-1 .col-left .img img {
+    width: 150px;
+    height: 200px;
+    padding: 0px 20px 55px 0px;
+  }
+}
+@media (max-width: 992px) {
+  .detail .container .row-1 .col-left .img {
+    width: 300px;
+    height: 300px;
+  }
+}
+@media (max-width: 992px) and (max-width: 768px) {
+  .detail .container .row-1 .col-left .img {
+    width: 250px;
+    height: 250px;
+  }
+}
 .detail .container .row-1 .col-right {
   position: absolute;
 }
@@ -1480,6 +1506,12 @@ header .container .content .register {
   font-weight: 300;
   color: #000000;
 }
+@media (max-width: 992px) and (max-width: 768px) {
+  .detail .container .row-1 .col-right h1 {
+    font-size: 20px;
+    width: 300px;
+  }
+}
 .detail .container .row-1 .col-right p {
   position: absolute;
   width: 503px;
@@ -1492,6 +1524,14 @@ header .container .content .register {
   font-weight: 400;
   color: #000000;
 }
+@media (max-width: 992px) and (max-width: 768px) {
+  .detail .container .row-1 .col-right p {
+    width: 300px;
+    height: 50px;
+    font-size: 16px;
+    margin-top: -10px;
+  }
+}
 .detail .container .row-1 .col-right h3 {
   position: absolute;
   width: 162px;
@@ -1503,6 +1543,20 @@ header .container .content .register {
   font-size: 24px;
   font-weight: 400;
   color: #1ED90E;
+}
+@media (max-width: 992px) {
+  .detail .container .row-1 .col-right h3 {
+    width: 300px;
+    height: 200px;
+    margin-top: -40px;
+  }
+}
+@media (max-width: 992px) and (max-width: 768px) {
+  .detail .container .row-1 .col-right h3 {
+    font-size: 20px;
+    width: 300px;
+    margin-top: -30px;
+  }
 }
 .detail .container .row-1 .col-right .button-size button {
   font-size: 24px;
@@ -1518,6 +1572,23 @@ header .container .content .register {
   left: 500px;
   cursor: pointer;
   margin-left: 25px;
+}
+@media (max-width: 992px) {
+  .detail .container .row-1 .col-right .button-size button {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    margin-bottom: 15px;
+    position: relative;
+  }
+}
+@media (max-width: 992px) and (max-width: 768px) {
+  .detail .container .row-1 .col-right .button-size button {
+    width: 30px;
+    margin-bottom: 10px;
+    height: 30px;
+    font-size: 15px;
+  }
 }
 .detail .container .row-1 .col-right .button-size .size1 {
   left: 526px;
@@ -1540,6 +1611,12 @@ header .container .content .register {
 .detail .container .row-1 .col-right .button-size .size7 {
   left: 952px;
 }
+@media (max-width: 992px) and (max-width: 768px) {
+  .detail .container .row-1 .col-right .button-size {
+    width: 300px;
+    margin-bottom: 10px;
+  }
+}
 .detail .container .row-1 .col-right h4 {
   position: absolute;
   width: 113px;
@@ -1551,6 +1628,18 @@ header .container .content .register {
   font-size: 30px;
   font-weight: 600;
   color: #F50E0E;
+}
+@media (max-width: 992px) {
+  .detail .container .row-1 .col-right h4 {
+    font-size: 25px;
+    padding-top: 30px;
+  }
+}
+@media (max-width: 992px) and (max-width: 768px) {
+  .detail .container .row-1 .col-right h4 {
+    font-size: 20px;
+    padding-top: 20px;
+  }
 }
 .detail .container .row-1 .col-right .button-amount button {
   font-size: 30px;
@@ -1566,6 +1655,21 @@ header .container .content .register {
   background: linear-gradient(180deg, #6181F3 0%, #7C97F5 99.48%);
   border: none;
   cursor: pointer;
+}
+@media (max-width: 992px) {
+  .detail .container .row-1 .col-right .button-amount button {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+}
+@media (max-width: 992px) and (max-width: 768px) {
+  .detail .container .row-1 .col-right .button-amount button {
+    width: 30px;
+    margin-bottom: 10px;
+    height: 30px;
+    font-size: 15px;
+  }
 }
 .detail .container .row-1 .col-right .button-amount .button-plus {
   left: 527px;
@@ -1585,6 +1689,19 @@ header .container .content .register {
   bottom: auto;
   left: 597px;
 }
+@media (max-width: 992px) {
+  .detail .container .row-1 .col-right .button-amount span {
+    font-size: 20px;
+  }
+}
+@media (max-width: 992px) and (max-width: 768px) {
+  .detail .container .row-1 .col-right .button-amount span {
+    width: 30px;
+    margin-bottom: 10px;
+    height: 30px;
+    font-size: 15px;
+  }
+}
 .detail .container .row-1 .col-right .button-add button {
   font-size: 24px;
   font-weight: 400;
@@ -1600,144 +1717,43 @@ header .container .content .register {
   border: none;
   cursor: pointer;
 }
-
-@media (max-width: 1279px) and (max-width: 576px) {
-  .detail .container {
-    height: auto;
-  }
-}
-@media (max-width: 1279px) {
-  .detail .container .row-1 {
-    height: 100%;
-    display: flex;
-    padding: 30px 15px;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  .detail .container .row-1 .col-left {
-    width: 434px;
-    padding: 0 50px;
-  }
-}
-@media (max-width: 1279px) and (max-width: 972px) {
-  .detail .container .row-1 .col-left {
-    width: 100%;
-  }
-}
-@media (max-width: 1279px) and (max-width: 768px) {
-  .detail .container .row-1 .col-left {
-    padding: 0 !important;
-  }
-}
-@media (max-width: 1279px) {
-  .detail .container .row-1 .col-left .img {
-    position: static;
-    padding-top: 50px;
-  }
-}
-@media (max-width: 1279px) and (max-width: 972px) {
-  .detail .container .row-1 .col-left .img {
-    width: auto;
-    height: auto;
-    padding: 10px 0;
-  }
-}
-@media (max-width: 1279px) {
-  .detail .container .row-1 .col-left .img img {
-    position: static;
-    display: block;
-    margin: auto;
-  }
-}
-@media (max-width: 1279px) {
-  .detail .container .row-1 .col-right {
-    flex: 1;
-    padding: 0 50px;
-  }
-}
-@media (max-width: 1279px) and (max-width: 972px) {
-  .detail .container .row-1 .col-right {
-    width: 100%;
-  }
-}
-@media (max-width: 1279px) and (max-width: 768px) {
-  .detail .container .row-1 .col-right {
-    padding: 0 !important;
-  }
-}
-@media (max-width: 1279px) {
-  .detail .container .row-1 .col-right h1 {
-    position: static;
-    width: auto;
-    height: auto;
-    font-size: 16px;
-  }
-}
-@media (max-width: 1279px) {
-  .detail .container .row-1 .col-right p {
-    position: static;
-    width: auto;
-    height: auto;
-    margin-top: 10px;
-    font-size: 10px;
-  }
-}
-@media (max-width: 1279px) {
-  .detail .container .row-1 .col-right h3 {
-    position: static;
-    width: auto;
-    height: auto;
-    margin: 10px 0;
-    font-size: 16px;
-  }
-}
-@media (max-width: 1279px) {
-  .detail .container .row-1 .col-right .button-size button {
-    position: static;
-    margin: 5px 10px 5px 0;
-  }
-}
-@media (max-width: 1279px) {
-  .detail .container .row-1 .col-right h4 {
-    position: static;
-    width: auto;
-    height: auto;
-    margin: 10px 0;
-  }
-}
-@media (max-width: 1279px) and (max-width: 972px) {
-  .detail .container .row-1 .col-right h4 {
-    display: inline-block;
-  }
-}
-@media (max-width: 1279px) and (max-width: 972px) {
-  .detail .container .row-1 .col-right .button-amount {
-    display: inline-block;
-    margin: 0 20px;
-  }
-}
-@media (max-width: 1279px) {
-  .detail .container .row-1 .col-right .button-amount button {
-    position: static;
-  }
-}
-@media (max-width: 1279px) {
-  .detail .container .row-1 .col-right .button-amount span {
-    position: static;
-    margin: 0 10px;
-  }
-}
-@media (max-width: 1279px) and (max-width: 972px) {
+@media (max-width: 992px) {
   .detail .container .row-1 .col-right .button-add {
-    display: inline-block;
+    width: 300px;
+    height: 300px;
   }
 }
-@media (max-width: 1279px) {
-  .detail .container .row-1 .col-right .button-add button {
-    position: static;
-    margin-top: 10px;
+@media (max-width: 992px) and (max-width: 768px) {
+  .detail .container .row-1 .col-right .button-add {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    right: 640px;
+    top: 250px;
   }
 }
+@media (max-width: 992px) {
+  .detail .container .row-1 .col-right {
+    width: 300px;
+    height: 300px;
+  }
+}
+@media (max-width: 992px) and (max-width: 768px) {
+  .detail .container .row-1 .col-right {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    right: 640px;
+    top: 250px;
+  }
+}
+@media (max-width: 992px) and (max-width: 768px) {
+  .detail .container .row-1 {
+    width: 300px;
+    height: 650px;
+  }
+}
+
 .products {
   padding: 30px 0;
 }
@@ -1766,7 +1782,7 @@ header .container .content .register {
     padding-left: 100px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1200px) and (max-width: 768px) {
   .products .container .content .row {
     padding-left: 0px;
   }
@@ -1787,10 +1803,30 @@ header .container .content .register {
     height: 450px;
   }
 }
+@media (max-width: 1200px) and (max-width: 992px) {
+  .products .container .content .row .col {
+    max-width: 40%;
+    flex: 0 0 40%;
+    height: 400px;
+  }
+}
+@media (max-width: 1200px) and (max-width: 992px) and (max-width: 768px) {
+  .products .container .content .row .col {
+    padding-left: 0px;
+    max-width: 100%;
+    flex: 0 0 100%;
+    height: 350px;
+  }
+}
 .products .container .content .row .col .card-body .img-top {
   text-align: center;
 }
 @media (max-width: 992px) {
+  .products .container .content .row .col .card-body .img-top {
+    text-align: center;
+  }
+}
+@media (max-width: 992px) and (max-width: 768px) {
   .products .container .content .row .col .card-body .img-top {
     text-align: center;
   }
@@ -1804,7 +1840,15 @@ header .container .content .register {
     width: 150px;
     height: 150px;
     position: absolute;
-    left: 150px;
+    left: 100px;
+  }
+}
+@media (max-width: 992px) and (max-width: 768px) {
+  .products .container .content .row .col .card-body .img-top img {
+    padding-left: 0px;
+    flex: 0 0 50%;
+    height: 150px;
+    left: 240px;
   }
 }
 .products .container .content .row .col .card-body .bottom-1 {
@@ -1822,6 +1866,13 @@ header .container .content .register {
     padding-top: 150px;
   }
 }
+@media (max-width: 992px) and (max-width: 768px) {
+  .products .container .content .row .col .card-body .bottom-1 {
+    font-size: 16px;
+    width: 350px;
+    padding: 150px 0px 0px 110px;
+  }
+}
 .products .container .content .row .col .card-body .bottom-2 {
   margin-left: 10px;
   font-size: 20px;
@@ -1834,7 +1885,14 @@ header .container .content .register {
     font-size: 16px;
     width: 245px;
     height: 72px;
-    padding-top: 100px;
+    padding-top: 50px;
+  }
+}
+@media (max-width: 992px) and (max-width: 768px) {
+  .products .container .content .row .col .card-body .bottom-2 {
+    font-size: 14px;
+    width: 400px;
+    padding: 70px 0 0 50px;
   }
 }
 .products .container .content .row .col .btn-buy {
