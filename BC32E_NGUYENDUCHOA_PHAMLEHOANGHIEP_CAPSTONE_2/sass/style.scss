@@ -1527,7 +1527,6 @@ header {
 .detail {
     .container {
         @include position(relative, auto, 530px);
-
         .row-1 {
             .col-left {
                 .img {
@@ -1536,6 +1535,24 @@ header {
 
                     img {
                         @include position(absolute, 220px, 220px, 60px, auto, auto, 57px);
+                        @media (max-width:992px) {
+                            width:200px ;
+                            height:250px;
+                            padding: 0px 20px 55px 0px;
+                            @media (max-width:768px) {
+                                width:150px ;
+                                height:200px;
+                                padding: 0px 20px 55px 0px;
+                            }
+                        }
+                    }
+                    @media (max-width:992px) {
+                        width:300px ;
+                        height:300px ;
+                        @media (max-width:768px) {
+                            width:250px ;
+                            height:250px ;
+                        }
                     }
                 }
             }
@@ -1544,19 +1561,44 @@ header {
                 position: absolute;
                 h1 {
                     @include position(absolute, 503px, 36px, 67px, auto, auto, 527px);
-                    @include text($text-x, $text-light, $text-c1-dark)
+                    @include text($text-x, $text-light, $text-c1-dark);
+                    @media (max-width:992px) {
+                        // width:300px ;
+                        // height:300px ;
+                        @media (max-width:768px) {
+                            font-size: 20px;
+                            width:300px ;
+                        }
+                    }
                 }
 
                 p {
                     @include position(absolute, 503px, 90px, 112px, auto, auto, 527px);
-                    @include text($text-s,$text-regular, $text-c1-dark)
+                    @include text($text-s,$text-regular, $text-c1-dark);
+                    @media (max-width:992px) {
+                       
+                        @media (max-width:768px) {
+                            width:300px ;
+                            height:50px ;
+                            font-size: 16px;
+                            margin-top: -10px;
+                        }
+                    }
                 }
-
                 h3 {
                     @include position(absolute, 162px, 58px, 210px, auto, auto, 527px);
-                    @include text($text-base, $text-regular, $text-c1-green)
+                    @include text($text-base, $text-regular, $text-c1-green);
+                    @media (max-width:992px) {
+                        width:300px ;
+                        height:200px ;
+                        margin-top: -40px;
+                        @media (max-width:768px) {
+                        font-size: 20px;
+                        width: 300px;
+                        margin-top: -30px;
+                        }
+                    }
                 }
-
                 .button-size {
                     button {
                         @include text($text-base, $text-semibold, $text-c2-dark);
@@ -1564,16 +1606,43 @@ header {
                          @include position(relative, 50px, 50px, 250px, 0, 0, 500px);
                         cursor: pointer;
                         margin-left: 25px;
+                        @media (max-width:992px) {
+                            width: 40px;
+                            height: 40px;
+                            font-size: 20px;
+                            margin-bottom: 15px;
+                            position: relative;
+                            @media (max-width:768px) {
+                                width: 30px;
+                                margin-bottom: 10px;
+                                height: 30px;
+                                font-size: 15px;
+                            }
+                        }
                     }
                     @for $i from 0 to 7 {
                         .size#{($i+1)} {
                             left: 526px + 71px*($i);
                         }
                     }
+                    @media (max-width:992px) {
+                        @media (max-width:768px) {
+                        width: 300px;
+                        margin-bottom:10px;
+                        }
+                    }
                 }
                 h4 {
                     @include position(absolute, 113px, 47px, 317px, auto, auto, 527px);
-                    @include text($text-x, $text-semibold, $text-c1-red)
+                    @include text($text-x, $text-semibold, $text-c1-red);
+                    @media (max-width:992px) {
+                        font-size: 25px;
+                        padding-top: 30px;
+                        @media (max-width:768px) {
+                            font-size: 20px;
+                            padding-top: 20px;
+                        }
+                    }
                 }
 
                 .button-amount {
@@ -1583,20 +1652,38 @@ header {
                         background: linear-gradient(180deg, #6181F3 0%, #7C97F5 99.48%);
                         border: none;
                         cursor: pointer;
+                        @media (max-width:992px) {
+                            width: 40px;
+                            height: 40px;
+                            font-size: 20px;
+                            @media (max-width:768px) {
+                                width: 30px;
+                                margin-bottom: 10px;
+                                height: 30px;
+                                font-size: 15px;
+                            }
+                        }
                     }
-
                     .button-plus {
                         left: 527px;
                     }
-
                     .button-minus {
                         left: 636px;
                     }
-
                     span {
                         @include text($text-x,$text-regular , $text-c1-dark);
                         @include position(absolute, 14px, 36px, 377px, auto, auto, 597px);
+                        @media (max-width:992px) {
+                            font-size: 20px;
+                            @media (max-width:768px) {
+                                width: 30px;
+                                margin-bottom: 10px;
+                                height: 30px;
+                                font-size: 15px;
+                            }
+                        }
                     }
+                    
                 }
 
                 .button-add {
@@ -1607,132 +1694,165 @@ header {
                         border: none;
                         cursor: pointer;
                     }
+                    @media (max-width:992px) {
+                        width:300px ;
+                        height:300px ;
+                        @media (max-width:768px) {
+                            width:300px;
+                            height:300px;
+                            position:absolute;
+                            right: 640px;
+                            top: 250px;
+                        }
+                    }
                 }
-            }
-        }
+                @media (max-width:992px) {
+                    width:300px ;
+                    height:300px ;
+                    @media (max-width:768px) {
+                        width:300px;
+                        height:300px;
+                        position:absolute;
+                        right: 640px;
+                        top: 250px;
+                    }
+                }
+            }   
+            @media (max-width:992px) {
+                // width:300px ;
+                // height:300px ;
+                @media (max-width:768px) {
+                    width:300px;
+                    height: 650px;
+                    // position:absolute;
+                    // right: 640px;
+                    // top: 250px;
+                }
+            }        
+        }  
     }
 }
 
-@include reponsive(xl) {
-    .detail {
-        .container {
-            @include reponsive(sm) {
-                height: auto;
-            }
+// @include reponsive(xl) {
+//     .detail {
+//         .container {
+//             @include reponsive(sm) {
+//                 height: auto;
+//             }
 
-            .row-1 {
-                height: 100%;
-                display: flex;
-                padding: 30px 15px;
-                align-items: center;
-                flex-wrap: wrap;
+//             .row-1 {
+//                 height: 100%;
+//                 display: flex;
+//                 padding: 30px 15px;
+//                 align-items: center;
+//                 flex-wrap: wrap;
 
-                .col-left {
-                    width: 434px;
-                    padding: 0 50px;
+//                 .col-left {
+//                     width: 434px;
+//                     padding: 0 50px;
 
-                    @include reponsive(lg) {
-                        width: 100%;
-                    }
+//                     @include reponsive(lg) {
+//                         width: 100%;
+//                     }
 
-                    @include reponsive(md) {
-                        padding: 0 !important;
-                    }
+//                     @include reponsive(md) {
+//                         padding: 0 !important;
+//                     }
 
-                    .img {
-                        position: static;
-                        padding-top: 50px;
+//                     .img {
+//                         position: static;
+//                         padding-top: 50px;
 
-                        @include reponsive(lg) {
-                            width: auto;
-                            height: auto;
-                            padding: 10px 0;
-                        }
+//                         @include reponsive(lg) {
+//                             width: auto;
+//                             height: auto;
+//                             padding: 10px 0;
+//                         }
 
-                        img {
-                            position: static;
-                            display: block;
-                            margin: auto;
-                        }
-                    }
-                }
+//                         img {
+//                             position: static;
+//                             display: block;
+//                             margin: auto;
+//                         }
+//                     }
+//                 }
 
-                .col-right {
-                    flex: 1;
-                    padding: 0 50px;
+//                 .col-right {
+//                     flex: 1;
+//                     padding: 0 50px;
 
-                    @include reponsive(lg) {
-                        width: 100%;
-                    }
+//                     @include reponsive(lg) {
+//                         width: 100%;
+//                     }
 
-                    @include reponsive(md) {
-                        padding: 0 !important;
-                    }
+//                     @include reponsive(md) {
+//                         padding: 0 !important;
+//                     }
 
-                    h1 {
-                        @include positiondefault;
-                        font-size: $text-s;
-                    }
+//                     h1 {
+//                         @include positiondefault;
+//                         font-size: $text-s;
+//                     }
 
-                    p {
-                        @include positiondefault;
-                        margin-top: 10px;
-                        font-size: 10px
-                    }
+//                     p {
+//                         @include positiondefault;
+//                         margin-top: 10px;
+//                         font-size: 10px
+//                     }
 
-                    h3 {
-                        @include positiondefault;
-                        margin: 10px 0;
-                        font-size: $text-s;
-                    }
+//                     h3 {
+//                         @include positiondefault;
+//                         margin: 10px 0;
+//                         font-size: $text-s;
+//                     }
 
-                    .button-size {
-                        button {
-                            position: static;
-                            margin: 5px 10px 5px 0;
-                        }
-                    }
+//                     .button-size {
+//                         button {
+//                             position: static;
+//                             margin: 5px 10px 5px 0;
+//                         }
+//                     }
 
-                    h4 {
-                        @include positiondefault;
-                        margin: 10px 0;
+//                     h4 {
+//                         @include positiondefault;
+//                         margin: 10px 0;
 
-                        @include reponsive(lg) {
-                            display: inline-block;
-                        }
-                    }
+//                         @include reponsive(lg) {
+//                             display: inline-block;
+//                         }
+//                     }
 
-                    .button-amount {
-                        @include reponsive(lg) {
-                            display: inline-block;
-                            margin: 0 20px;
-                        }
+//                     .button-amount {
+//                         @include reponsive(lg) {
+//                             display: inline-block;
+//                             margin: 0 20px;
+//                         }
 
-                        button {
-                            position: static
-                        }
+//                         button {
+//                             position: static
+//                         }
 
-                        span {
-                            position: static;
-                            margin: 0 10px;
-                        }
-                    }
+//                         span {
+//                             position: static;
+//                             margin: 0 10px;
+//                         }
+//                     }
 
-                    .button-add {
-                        @include reponsive(lg) {
-                            display: inline-block;
-                        }
+//                     .button-add {
+//                         @include reponsive(lg) {
+//                             display: inline-block;
+//                         }
 
-                        button {
-                            position: static;
-                            margin-top: 10px;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
+//                         button {
+//                             position: static;
+//                             margin-top: 10px;
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
 .products {
     padding: 30px 0;
 
@@ -1755,9 +1875,12 @@ header {
                 flex-wrap: wrap;
                 @media (max-width:1200px) {
                     padding-left: 100px;
-                }
-                @media (max-width:768px) {
-                    padding-left: 0px;
+                    @media (max-width:768px) {
+                        padding-left: 0px;
+                        // max-width: 100%;
+                        // flex: 0 0 100%;
+                        // height: 350px;
+                    }
                 }
                 .col {
                     max-width:  30%;
@@ -1771,12 +1894,30 @@ header {
                         max-width: 40%;
                         flex: 0 0 40%;
                         height: 450px;
+                        @media (max-width:992px) {
+                            // padding-left: 0px;
+                            // max-width: 100%;
+                            // flex: 0 0 100%;
+                            // height: 350px;
+                            max-width: 40%;
+                            flex: 0 0 40%;
+                            height: 400px;
+                            @media (max-width:768px) {
+                                padding-left: 0px;
+                                max-width: 100%;
+                                flex: 0 0 100%;
+                                height: 350px;
+                            }
+                        }
                     }
                     .card-body {
                         .img-top {
                             text-align: center;
                             @media (max-width:992px) {
                             text-align: center;
+                                @media (max-width:768px) {
+                                     text-align: center;
+                                }
                             }
                             img {
                                 width: 220px;
@@ -1785,7 +1926,13 @@ header {
                                     width: 150px;
                                     height: 150px;
                                     position: absolute;
-                                    left: 150px;
+                                    left: 100px;
+                                    @media (max-width:768px) {
+                                        padding-left: 0px;
+                                        flex: 0 0 50%;
+                                        height: 150px;
+                                        left: 240px;
+                                    }
                                 }
                             }
                         }
@@ -1798,6 +1945,11 @@ header {
                                 width: 245px;
                                 height: 57px;
                                 padding-top: 150px;
+                                    @media (max-width:768px) {
+                                        font-size: 16px;
+                                        width: 350px;
+                                        padding: 150px 0px 0px 110px;
+                                    }
                             }            
                         }
                         .bottom-2{
@@ -1808,7 +1960,12 @@ header {
                                     font-size: $text-s;
                                     width: 245px;
                                     height: 72px;
-                                    padding-top: 100px
+                                    padding-top: 50px;
+                                    @media (max-width:768px) {
+                                        font-size: 14px;
+                                        width: 400px;
+                                        padding:70px 0 0 50px
+                                    }
                                 }
                         }
                         
@@ -1851,8 +2008,7 @@ header {
                     }
                 }
             }
-}
-       
+        }
     }
 }
 @include reponsive(lg) {
