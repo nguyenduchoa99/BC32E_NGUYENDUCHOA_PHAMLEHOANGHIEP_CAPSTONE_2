@@ -35,7 +35,7 @@ function renderProduct(arrProduct) {
         </div>
         
         <div class = 'btn-buy-2'>
-              <button class='btn-buy-shose'>Buy now</button>
+        <a href="./detail.html?producid=${shose.id}" class="btn-buy-shose">Buy now</a>
               <span>$${shose.price}</span>
         </div>
         
